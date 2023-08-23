@@ -44,10 +44,10 @@ body {
 }
 
 header {
+    z-index: 10;
     width: auto;
     position: fixed;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    width: 100%;
     transition: .6s ease;
 }
 
@@ -80,13 +80,35 @@ header {
 }
 
 /* --------------------====================HEADER AND NAV====================-------------------- */
-header {
-    position: fixed;
-    width: 100%;
+ 
+
+
+/*=======Common styles for all sections=======*/
+.navbar ul {
+    list-style: none;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
 
 }
 
-/*=======Common styles for all sections=======*/
+.hover-effect {
+    background: linear-gradient(90deg, #5329FC 0%, #EB00FF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: width 0.5s ease-out;
+}
+
+.nav-link:hover::before {
+    width: 105%;
+    transform-origin: center;
+}
+
+
 
 
 /* styles for desktop screens */
@@ -98,24 +120,7 @@ header {
         height: 35px;
     }
 
-    .navbar ul {
-        list-style: none;
-    }
 
-    .navbar a {
-        color: white;
-        text-decoration: none;
-        letter-spacing: 2px;
-
-    }
-
-    .hover-effect {
-        background: linear-gradient(90deg, #5329FC 0%, #EB00FF 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        transition: width 0.5s ease-out;
-    }
 
     /*===============NAV ===============*/
     .navbar {
@@ -139,7 +144,6 @@ header {
 
     .nav-branding {
         font-size: 1.3rem;
-        font-family: "Monument";
     }
 
     .nav-link {
@@ -487,12 +491,17 @@ header {
     }
 
     .navbar {
+        display: flex;
+        position: relative;
+
         justify-content: space-between;
         min-height: 70px;
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 0 24px;
+        /* padding: 0 24px; */
+        padding: 2vw 4vw;
+
     }
 
 
@@ -500,9 +509,9 @@ header {
     /* ================ho hi nahi raha yaar animate back================   */
 
     .nav-menu {
+        
         display: none;
         position: fixed;
-        z-index: 1;
         top: -100%;
         gap: 0;
         left: 50%;
@@ -510,17 +519,24 @@ header {
         -webkit-backdrop-filter: blur(75px);
         backdrop-filter: blur(75px);
         transition: all 0.5s ease-in-out;
+        
     }
 
 
-    .nav-menu.active {
+    .nav-menu:before, .nav-menu.active {
+        /* position: absolute; */
+    /* z-index: 10; */
+
+        display: flex;
+        justify-content: center;
+        align-items: start;
         width: 95%;
-        height: 95%;
+        height: 90vh;
         border-radius: 36px 36px 280.5px 280.5px;
         border: 3px solid rgba(255, 255, 255, 0.10);
         background: rgba(0, 0, 0, 0.01);
-        display: flex;
-        top: 48%;
+        /* top: 95%; */
+        top: 46vh;
         left: 50%;
         transform: translate(-50%, -50%);
         -webkit-backdrop-filter: blur(75px);
@@ -534,7 +550,7 @@ header {
     @keyframes toggleAnimation {
         0% {
             top: 5px;
-            right: 5px;
+            /* right: 5px; */
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -569,6 +585,17 @@ header {
         to {
             transform: scale(1);
         }
+    }
+
+    .nav-link {
+        font-family: "Monument";
+        font-size: 1.7em;
+        font-weight: 500;
+        text-transform: lowercase;
+        transition: 1.7s ease;
+        display: inline-block;
+        position: relative;
+
     }
 
     .nav-link::before {
