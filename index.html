@@ -9,52 +9,51 @@
 </head>
 
 <body>
-  <div class="main">
+  <div class="main" id="main">
     <!-- ---------------===============HEADER===============--------------- -->
     <header class="header" id="header">
-      <nav class="navbar ">
-        <a href="#" class="nav-branding">
-          <svg class="logo-main" xmlns="http://www.w3.org/2000/svg" width="54" height="44" viewBox="0 0 54 44"
-            fill="none">
-            <path
-              d="M0 9.30933H27.1323V13.8801L26.8398 13.6973C26.7666 13.6607 23.8413 9.71156 17.369 9.71156C16.8571 9.71156 16.4183 9.93095 16.0527 10.2601C15.7236 10.5891 15.5407 11.0645 15.5407 11.5764V34.9058H11.5916V11.5764C11.5916 11.0645 11.3722 10.5891 11.0431 10.2601C10.6774 9.93095 10.2386 9.71156 9.72667 9.71156C3.25441 9.71156 0.329098 13.6607 0.255966 13.6973L0 13.8801V9.30933ZM47.9028 30.4813C48.4879 32.0171 49.3655 33.4066 50.4625 34.6133L50.755 34.9058H45.9282L45.8917 34.8327C44.7581 32.8947 44.429 30.6641 44.429 28.4336C44.429 27.7388 44.4656 27.0806 44.5022 26.3858C44.5387 25.9836 44.5753 25.5448 44.5753 25.1426C44.6484 23.7896 44.5387 22.8023 44.2096 21.9247C44.0999 21.5225 43.844 21.1934 43.5149 20.9374C43.4417 20.8643 43.3686 20.7912 43.2589 20.718C41.8328 19.6576 39.7851 19.3285 37.8105 19.8405C37.6277 19.9136 37.4448 19.9502 37.262 20.0233C35.8725 20.4986 34.6292 21.3397 33.6785 22.4367L33.2031 22.9486V34.9058H29.2905V9.30933H33.2031V22.3635L36.6404 18.5241C36.9329 18.195 37.262 17.8293 37.5911 17.4636L44.8678 9.30933H51.1938L50.3528 9.67499C50.2796 9.71155 42.2716 13.1854 37.8836 17.7196L35.4702 20.4255C36.2016 19.9867 36.9695 19.6942 37.7008 19.4748C39.7851 18.9629 41.9425 19.292 43.4783 20.4255C43.7708 20.6083 44.0268 20.8277 44.2462 21.0837L44.2828 21.1203C45.1969 22.071 45.8917 23.3874 46.4402 25.1426C46.623 25.8739 46.8058 26.6052 46.9887 27.3C47.2446 28.3604 47.5006 29.4574 47.9028 30.4813Z"
-              fill="white" />
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M37.2479 0.606234C31.1923 0.978024 24.1031 3.43346 17.4269 7.89868C10.7506 12.3639 5.77413 17.9781 3.11804 23.4329C0.459202 28.8934 0.144548 34.1449 2.68911 37.9493C5.23359 41.7538 10.2073 43.4684 16.2692 43.0962C22.3249 42.7244 29.414 40.269 36.0903 35.8038C42.7666 31.3386 47.743 25.7243 50.3991 20.2695C53.0581 14.809 53.3726 9.55751 50.8282 5.75305C48.2837 1.94859 43.31 0.233988 37.2479 0.606234ZM37.2293 0.0506989C43.397 -0.327946 48.6069 1.40914 51.3008 5.43693C53.9946 9.46481 53.6107 14.9432 50.9054 20.4989C48.1974 26.0605 43.1442 31.749 36.3967 36.2619C29.6493 40.7747 22.4621 43.2727 16.288 43.6518C10.1201 44.0304 4.91034 42.2933 2.2164 38.2654C-0.477448 34.2376 -0.0934995 28.7593 2.61178 23.2035C5.31988 17.642 10.373 11.9534 17.1205 7.44059C23.868 2.92774 31.055 0.429801 37.2293 0.0506989Z"
-              fill="white" />
-          </svg>
-        </a>
-        <ul class="nav-menu active">
-          <li class="nav-item">
-            <a href="#" class="nav-link ">INTRO.</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link ">ABOUT.</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link ">PROJECTS.</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link ">CONNECT.</a>
-          </li>
-        </ul>
+      <nav class="nav-container">
 
-        <div class="hamburger active">
+        <a href="#portfolio" class="nav-branding">
+          <img class="logo-main" src="./assets/img/logo.svg" alt="logo">
+        </a>
+
+        <div class="nav-menu ">
+          <ul class=" nav-list ">
+            <li class="nav-item">
+              <a href="#intro" class="nav-link ">INTRO.</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link ">ABOUT.</a>
+            </li>
+            <li class="nav-item">
+              <a href="#projects" class="nav-link ">PROJECTS.</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link ">CONNECT.</a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="hamburger ">
           <span class="bar bar1"></span>
           <span class="bar bar2"></span>
           <span class="bar bar3"></span>
         </div>
+
       </nav>
     </header>
 
     <!-- ---------------===============INTRO===============--------------- -->
     <section class="intro flex-center" id="intro">
       <div class="intro-container">
+        <div class="main-intro-frame">
           <!-- ----------LANDING-FRAME----------  -->
           <div class="landing-frame">
             <h2>Hello,</h2>
             <span class="text-1">i’m </span>
-            <span class="text-2">Tamojeet K</span>
+            <span class="text-2" data-text="Tamojeet K">Tamojeet K<span class="text-2-dot">.</span></span>
             <svg class="text-2-card" xmlns="http://www.w3.org/2000/svg" width="408" height="79" viewBox="0 0 408 79"
               fill="none">
               <g style="mix-blend-mode:difference">
@@ -83,31 +82,30 @@
               tools for crafting new realities, with a keen eye for detail.
             </p>
           </div>
-
-
           <div>
-            <img  class="intro-img" src="./assets/img/intro-image.svg" alt="">
-            
+            <img class="intro-img" src="./assets/img/intro-image.svg" alt="">
           </div>
         </div>
-        <div class="tag-line ">
-          <h2 class="tag">WEB HASHIRA</h2>
-        </div>
+      </div>
 
-        <div class="scroll-down-button">
-          <a title="button" href="#about">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 91" fill="none">
-              <path d="M23.4832 52.8536L18.7016 57.6352C18.3111 58.0258 17.6779 58.0258 17.2874 57.6352L12.5058 52.8536"
-                stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M23.4832 39.2633L18.7016 44.0449C18.3111 44.4354 17.6779 44.4354 17.2874 44.0449L12.5058 39.2633"
-                stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
 
-              <rect x="1.5" y="1.5" width="34" height="73" rx="17" stroke="white" stroke-opacity="0.5"
-                stroke-width="3" />
-              <circle cx="18" cy="87" r="4" fill="white" fill-opacity="0.5" />
-            </svg>
-          </a>
-        </div>
+      <div class="tag-line ">
+        <h2 class="tag">WEB HASHIRA</h2>
+      </div>
+
+      <div class="scroll-down-button">
+        <a title="button" href="#about">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 91" fill="none">
+            <path d="M23.4832 52.8536L18.7016 57.6352C18.3111 58.0258 17.6779 58.0258 17.2874 57.6352L12.5058 52.8536"
+              stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M23.4832 39.2633L18.7016 44.0449C18.3111 44.4354 17.6779 44.4354 17.2874 44.0449L12.5058 39.2633"
+              stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+
+            <rect x="1.5" y="1.5" width="34" height="73" rx="17" stroke="white" stroke-opacity="0.5" stroke-width="3" />
+            <circle cx="18" cy="87" r="4" fill="white" fill-opacity="0.5" />
+          </svg>
+        </a>
+      </div>
 
     </section>
 
@@ -117,33 +115,64 @@
         <h1 class="back-text">ABOUT ME</h1>
         <h1 class="front-text">Who Am I ?</h1>
       </div>
+
+      <div class="about-image">
+
+        <!-- <svg id="about-blob" xmlns="http://www.w3.org/2000/svg" width="200" height="300"
+          viewBox="0 0 581 612" fill="none">
+          <path id="blob1" fill-rule="evenodd" clip-rule="evenodd"
+            d="M287.837 2.2674C388.308 12.1501 446.49 110.194 502.246 194.357C549.804 266.147 600.718 349.121 571.212 430.021C543.817 505.132 447.687 513.148 374.356 545.002C307.125 574.207 240.084 633.419 173.489 602.789C106.35 571.908 109.098 481.452 84.6027 411.73C52.6416 320.756 -29.7759 232.613 13.0936 146.242C61.4564 48.8042 179.579 -8.38128 287.837 2.2674Z" />
+
+          <path id="blob2" fill-rule="evenodd" clip-rule="evenodd"
+            d="M267.901 0.479324C325.981 1.75432 386.108 8.51982 432.331 43.7097C478.016 78.4887 505.059 133.045 516.057 189.399C526.208 241.413 496.79 289.76 490.621 342.396C482.218 414.086 524.996 502.415 473.446 552.939C423.251 602.135 335.036 581.481 267.901 560.682C211.954 543.348 183.997 485.093 137.888 448.977C94.2816 414.821 25.6127 406.907 5.62748 355.247C-14.4598 303.324 24.5013 249.453 40.0136 195.985C56.1861 140.241 54.0872 74.1662 98.1395 36.3735C143.138 -2.23103 208.626 -0.821885 267.901 0.479324Z" />
+        </svg> -->
+
+        <img class="about-img" src="./assets/img/me-image.png" alt="" srcset="">
+
+      </div>
+
+
+      <div class="about-para">
+        My name is Tamojeet.
+        
+        I'm a driven and creative Computer Science
+        student,
+        transforming ideas into reality,
+        one website at a time.
+        
+        I specialize in designing websites from 
+        start to finish, beginning with prototyping 
+        and ending with a polished final product. 
+        With my skills and expertise,
+        I bring your vision to life on the web.
+
+      </div>
+
+      <button class="about-button" type="button">
+        <a href="#">Know More</a>
+      </button>
+
+
     </section>
 
-    <!-- ---------------===============PROJECTS===============--------------- -->
+    <!-- ---------------===============PROJECT===============--------------- -->
     <section class="projects" id="projects">
       <div class="heading-container">
-        <h1 class="back-text">ABOUT ME</h1>
-        <h1 class="front-text">Who Am I ?</h1>
+        <h1 class="back-text">PROJECTS</h1>
+        <h1 class="front-text">What I have been upto</h1>
       </div>
-    </section>
-    <!-- ---------------===============CONNECT===============--------------- -->
-    <section class="connect" id="connect">
-      <div class="heading-container">
-        <h1 class="back-text">ABOUT ME</h1>
-        <h1 class="front-text">Who Am I ?</h1>
-      </div>
+
     </section>
 
 
-
-     <!-- ************************FOOTER************************ -->
-  <footer class="footer">
-
-  </footer>
+  </div>
+  <!-- ---------------===============SCRIPTS===============--------------- -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
     integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap-external-plugins@1.0.2/SplitTextPlugin.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/baffle@0.3.6/dist/baffle.min.js"></script>
   <script src="./assets/js/animations.js"></script>
   <script src="./assets/js/script.js"></script>
 
