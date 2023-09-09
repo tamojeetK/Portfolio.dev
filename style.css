@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syncopate&display=swap');
 
 /* ---------------===============CUSTOM FONTS===============--------------- */
 @font-face {
@@ -401,6 +402,69 @@
 }
 
 
+@keyframes toggleAnimation {
+    0% {
+        top: 5px;
+        right: 5px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    100% {
+        top: 48%;
+        left: 50%;
+        width: 95%;
+        height: 95%;
+        border-radius: 36px 36px 280.5px 280.5px;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+@keyframes animate {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+svg.about-img {
+    cursor: pointer;
+    /* border: solid red; */
+}
+
+#blob1 {}
+
+#blob2 {
+    fill-opacity: 0;
+}
+
+#glow {
+    /* Remove the visibility and animation-play-state properties / / Add an animation property with a name, duration, and iteration count */
+    animation: breathe 6s infinite ease-in-out;
+}
+
+/* Remove the :hover pseudo-class */
+
+/* Define a custom animation with @keyframes and a name */
+@keyframes breathe {
+
+    /* Set the fill-opacity to 0 at the start and end of the animation */
+    0%,
+    100% {
+        fill-opacity: 0;
+    }
+
+    /* Set the fill-opacity to 1 at the middle of the animation */
+    50% {
+        fill-opacity: 1;
+    }
+}
+
 /* ---------------ANIMATION--------------- */
 
 
@@ -637,7 +701,7 @@ header a {
 
     .text-1 {
         font-family: Krona One;
-        font-size: 3vw;
+        font-size: 2.5vw;
         font-weight: 400;
     }
 
@@ -795,7 +859,7 @@ header a {
 
     /* ----------------================ABOUT================---------------- */
     #about {
-        /* border: red solid; */
+        /* border: blue solid; */
         padding-top: 15vh;
     }
 
@@ -808,7 +872,6 @@ header a {
 
     .about {
         justify-content: space-between;
-
     }
 
     .heading-container {
@@ -852,9 +915,10 @@ header a {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 20vw;
+        width: 25vw;
         right: 10vw;
         top: 40vh;
+        /* border: red solid; */
     }
 
     /* ==========IMAGE-ABOUT-ENDS========= */
@@ -876,23 +940,21 @@ header a {
     .about-button {
         position: absolute;
         cursor: pointer;
-        border-radius: 10px;
+        border-radius: 20px;
         background: #1D93FF;
         border: #1D93FF solid 1px;
         padding: 1vw 2vw;
         white-space: nowrap;
         color: #000;
         font-family: Michroma;
-        font-size: 0.7em;
+        font-size: 0.8em;
         font-style: normal;
         font-weight: 800;
         transition: 0.3s ease-out;
         width: fit-content;
         width: -moz-fit-content;
         transform: translateX(8.5vw);
-
-
-        top: calc(100% + -9%);
+        top: calc(100% + -12%);
 
     }
 
@@ -902,7 +964,6 @@ header a {
     }
 
     .onHover {
-        border-radius: 10px;
         border: 2px solid #2397DE;
         background: linear-gradient(90deg, #00C7FF 0%, #0084DC 96.21%);
         box-shadow: -13px -6px 35px 4px rgba(0, 200, 255, 0.29), 11px 11px 38px 1px rgba(0, 22, 47, 0.77);
@@ -910,9 +971,7 @@ header a {
 
     /* ----------------=====================================---------------- */
     /* ----------------================PROJECTS================---------------- */
-    .projects {
-        justify-content: space-between;
-        /* align-items: center; */
+    #projects {
         /* border: solid red; */
         padding-top: 15vh;
     }
@@ -940,14 +999,93 @@ header a {
         position: absolute;
         top: 55%;
         /* top: 160px; */
-        left: 13.5%;
+        left: 13.6%;
         transform: translate(-25%, -50%);
         z-index: 1;
         white-space: nowrap;
 
     }
 
+    .project-wrapper {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 1vw;
+        /* border: solid cyan; */
+    }
+
+    .project-list {
+        width: 100%;
+        padding: 0vw 15vw 0vw;
+        /* border: yellowgreen solid; */
+    }
+
+    .project-list a {
+        font-family: 'Syncopate';
+        /* padding: 5vw 12vw 0vw; */
+        text-decoration: none;
+        color: white;
+    }
+
+    .project-item {
+        border-bottom: 2px solid rgb(255, 255, 255, 0.2);
+        padding: 1vw 4vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        /* z-index: 2; */
+        color: white;
+        mix-blend-mode: difference;
+    }
+
+    .project-item .project-title {
+        font-size: 2vw;
+        font-weight: lighter;
+    }
+
+    .project-link .arrow {
+        /* border: #0084DC solid; */
+        padding: 0.5vw;
+    }
+
+    .project-link .arrow img {
+        width: 3vw;
+    }
+
+    .projects-button {
+        cursor: pointer;
+        border-radius: 20px;
+        background: #1D93FF;
+        border: #1D93FF solid 1px;
+        padding: 1vw 5vw;
+        white-space: nowrap;
+        color: #000;
+        font-family: Michroma;
+        font-size: 1em;
+        font-style: normal;
+        font-weight: 800;
+        transition: 0.3s ease-out;
+        width: fit-content;
+        width: -moz-fit-content;
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+    }
+
+    .projects-button a {
+        text-decoration: none;
+        color: #000;
+    }
+
+
+
+
 }
+
+
+
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     /* styles for iPad screens */
@@ -1020,25 +1158,6 @@ header a {
         animation: toggleAnimation 0.5s ease-in-out;
     }
 
-    @keyframes toggleAnimation {
-        0% {
-            top: 5px;
-            right: 5px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-        }
-
-        100% {
-            top: 48%;
-            left: 50%;
-            width: 95%;
-            height: 95%;
-            border-radius: 36px 36px 280.5px 280.5px;
-            transform: translate(-50%, -50%);
-        }
-
-    }
 
     .nav-list {
         display: flex;
@@ -1057,15 +1176,6 @@ header a {
         animation: animate 0.5s ease-in-out;
     }
 
-    @keyframes animate {
-        from {
-            transform: scale(0);
-        }
-
-        to {
-            transform: scale(1);
-        }
-    }
 
     .nav-link {
         font-family: "Monument";
@@ -1366,6 +1476,8 @@ header a {
     .about {
         justify-content: space-between;
         align-items: center;
+        /* border: red solid; */
+
     }
 
     .heading-container {
@@ -1406,39 +1518,12 @@ header a {
 
     }
 
-
-
-    /* ==========IMAGE-ABOUT========= */
-    /* .about-image {
-        position: relative;
-        display: flex;
-        width: 50vw;
-        border: solid red;
-    } */
     .about-img {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 45vw;
     }
-
-    /* .about-blob {
-        width: 30vw;
-    }
-
-    #blob1 {
-        fill: rgba(217, 217, 217, 0.01);
-        stroke-width: 1px;
-        stroke: rgba(217, 217, 217, 0.14);
-        backdrop-filter: blur(25px);
-
-    }
-
-    #blob2 {
-        fill-opacity: 0;
-    } */
-
-    /* ==========IMAGE-ABOUT-ENDS========= */
 
     .about-para {
         margin: -12% 2% 0%;
@@ -1485,12 +1570,15 @@ header a {
 
     /* ----------------=====================================---------------- */
     /* ----------------================PROJECTS==============---------------- */
-    .projects {
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 5vh;
+
+    #projects {
+        /* border: solid red; */
     }
- 
+
+    .projects {
+        align-items: center;
+    }
+
 
     .projects .back-text {
         color: #FFF;
@@ -1505,16 +1593,16 @@ header a {
     .projects .front-text {
         color: #FFF;
         font-family: Syne;
-        font-size: 5vw;
+        font-size: 4.5vw;
         font-style: normal;
         font-weight: 800;
         line-height: normal;
         /* make the h1 element an absolutely positioned element */
         position: absolute;
         /* move the h1 element to the center of the container vertically */
-        top: 55%;
+        top: 50%;
         /* move the h1 element to the center of the container horizontally */
-        left: 30%;
+        left: 54%;
         /* adjust the h1 element's position based on its own size */
         transform: translate(-50%, -50%);
         /* make sure the h1 element is displayed on top of the other h1 element */
@@ -1522,6 +1610,80 @@ header a {
         white-space: nowrap;
 
     }
+
+    .project-wrapper {
+        margin-top: 10%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10vw;
+        align-items: center;
+        /* border: solid blue; */
+    }
+
+    .project-list {
+        width: 100%;
+        margin: 10vw 5vw 10vw;
+        /* border: yellowgreen solid; */
+    }
+
+    .project-list a {
+        font-family: 'Syncopate';
+        text-decoration: none;
+        color: white;
+    }
+
+    .project-item {
+        border-bottom: 2px solid rgb(255, 255, 255, 0.2);
+        padding: 10vw 8vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8vw;
+        position: relative;
+        /* z-index: 1; */
+        color: white;
+        mix-blend-mode: difference;
+    }
+
+    .project-item .project-title {
+        font-size: 5vw;
+        font-weight: lighter;
+    }
+
+    .project-link .arrow {
+        /* border: #0084DC solid; */
+        padding: 0.5vw;
+    }
+
+    .project-link .arrow img {
+        width: 6vw;
+    }
+
+    .projects-button {
+        cursor: pointer;
+        border-radius: 20px;
+        background: #1D93FF;
+        border: #1D93FF solid 1px;
+        padding: 4vw 7vw;
+        white-space: nowrap;
+        color: #000;
+        font-family: Michroma;
+        font-size: 1em;
+        font-style: normal;
+        font-weight: 800;
+        transition: 0.3s ease-out;
+        margin-bottom: 5vw;
+
+    }
+
+    .projects-button a {
+        text-decoration: none;
+        color: #000;
+    }
+
+
 
 
 
@@ -1595,5 +1757,15 @@ header a {
         font-style: normal;
         font-weight: 800;
         transition: 0.3s ease-out;
+    }
+
+    .project-wrapper {
+        margin-top: 0%;
+    }
+
+    .projects-button {
+        transform: translateY(-6vw);
+        padding: 4vw 6vh;
+        font-size: 0.8em;
     }
 }

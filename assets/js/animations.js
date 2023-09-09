@@ -48,6 +48,7 @@ gsap.to("#blob1", {
 });
 
 
+
 // const text = baffle(".about-para");
 // text.set({
 //   // characters: '░▒█ ░▒█>▓ ▒<░█▒ >▒░ ░▒▒█▒ </▓░ ▒▒█ ▓░▒░ ▒▒▓█',

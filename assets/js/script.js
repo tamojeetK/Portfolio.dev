@@ -69,23 +69,25 @@ let letter = '';
 
 
 // Get the button element by its id
-var button = document.querySelector(".about-button");
+var buttons = document.querySelectorAll(".about-button, .projects-button");
 
 // Define a function that can add or remove the .onHover class
 function toggleHoverClass(event) {
   // Check if the event type is mouseover or mouseout
   if (event.type == "mouseover") {
     // Add the .onHover class to the button element
-    button.classList.add("onHover");
+    this.classList.add("onHover");
   } else if (event.type == "mouseout") {
     // Remove the .onHover class from the button element
-    button.classList.remove("onHover");
+    this.classList.remove("onHover");
   }
 }
 
 // Attach the function to the button element as an event handler for mouseover and mouseout events
-button.addEventListener("mouseover", toggleHoverClass);
-button.addEventListener("mouseout", toggleHoverClass);
+buttons.forEach(function(button) {
+  button.addEventListener("mouseover", toggleHoverClass);
+  button.addEventListener("mouseout", toggleHoverClass);
+});
 
 
 
