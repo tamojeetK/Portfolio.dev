@@ -578,7 +578,21 @@ header a {
     line-height: normal;
 }
 
-
+.hover-image {
+    position: absolute;
+    height: 350px;
+    width: 650px;
+    overflow: hidden;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: blur(3px);
+    transition: all 0.5s ease;
+    /* background-color: red; */
+}
 
 /* styles for desktop screens */
 @media only screen and (min-width: 1024px) {
@@ -1018,7 +1032,8 @@ header a {
 
     .project-list {
         width: 100%;
-        padding: 0vw 15vw 0vw;
+        padding: 0.5vw 15vw 0vw;
+        position: relative;
         /* border: yellowgreen solid; */
     }
 
@@ -1027,6 +1042,12 @@ header a {
         /* padding: 5vw 12vw 0vw; */
         text-decoration: none;
         color: white;
+    }
+
+
+    .project-list .project-item:first-child {
+        border-top: 2px solid rgb(255, 255, 255, 0.2);
+
     }
 
     .project-item {
@@ -1043,8 +1064,9 @@ header a {
 
     .project-item .project-title {
         font-size: 2vw;
-        font-weight: lighter;
+        font-weight: 800;
     }
+
 
     .project-link .arrow {
         /* border: #0084DC solid; */
@@ -1634,9 +1656,14 @@ header a {
         color: white;
     }
 
+    .project-list .project-item:first-child {
+        border-top: 2px solid rgb(255, 255, 255, 0.2);
+
+    }
+
     .project-item {
         border-bottom: 2px solid rgb(255, 255, 255, 0.2);
-        padding: 10vw 8vw;
+        padding: 8vw 8vw;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -1649,7 +1676,7 @@ header a {
 
     .project-item .project-title {
         font-size: 5vw;
-        font-weight: lighter;
+        font-weight: 800;
     }
 
     .project-link .arrow {
@@ -1683,6 +1710,21 @@ header a {
         color: #000;
     }
 
+    .hover-image {
+        position: absolute;
+        margin-top: 385vw;
+        height: 150px;
+        width: 250px;
+        overflow: hidden;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        filter: blur(1.5px);
+        transition: all 0.5s ease;
+    }
 
 
 

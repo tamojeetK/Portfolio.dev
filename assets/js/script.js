@@ -84,7 +84,7 @@ function toggleHoverClass(event) {
 }
 
 // Attach the function to the button element as an event handler for mouseover and mouseout events
-buttons.forEach(function(button) {
+buttons.forEach(function (button) {
   button.addEventListener("mouseover", toggleHoverClass);
   button.addEventListener("mouseout", toggleHoverClass);
 });
@@ -111,3 +111,33 @@ const text2 = document.querySelector(".text-2");
 text2.classList.add("glitch");
 text2.classList.add("paths");
 text2.classList.add("layers");
+
+
+
+// ----------------================PROJECT-HOVER-EFFECT================----------------
+const projects = document.querySelectorAll(".project-title, .project-link");
+const hoverImage = document.querySelector(".hover-image");
+
+projects.forEach(project => {
+  project.addEventListener("mouseenter", () => {
+    let img = project.getAttribute("data-image");
+    let w = project.getAttribute("data-width");
+    let h = project.getAttribute("data-height");
+    hoverImage.style.backgroundImage = `url(${img})`;
+  });
+
+  project.addEventListener("mouseleave", () => {
+    hoverImage.style.backgroundImage = '';
+
+  });
+
+  window.addEventListener("mousemove", (event) => {
+    hoverImage.style.left = `${event.clientX - 100}px`;
+    hoverImage.style.top = `${event.clientY - 150}px`;
+  });
+});
+
+
+
+
+
