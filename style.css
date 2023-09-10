@@ -465,7 +465,17 @@ svg.about-img {
     }
 }
 
-/* ---------------ANIMATION--------------- */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - 1vw));
+    }
+}
+
+/* ---------------ANIMATION ENDS--------------- */
 
 
 * {
@@ -517,6 +527,12 @@ body {
 }
 
 #projects {
+    width: 100%;
+    height: 100vh;
+    /* background-color: #101010; */
+}
+
+#skills {
     width: 100%;
     height: 100vh;
     /* background-color: #101010; */
@@ -1101,6 +1117,101 @@ header a {
         color: #000;
     }
 
+    /* ----------------================================---------------- */
+
+
+    .marquee {
+        margin-top: 4vw;
+        display: flex;
+        overflow: hidden;
+        /* height: 40vh; */
+        background: rgba(0, 0, 0, 0.50);
+        /*if this changes, then all gap need to change ;*/
+        gap: 1vw;
+        padding: 0.5vw 0vw;
+        border-top: 2px solid rgba(249, 249, 249, 0.14);
+        border-bottom: 2px solid rgba(249, 249, 249, 0.14);
+        box-shadow: #EB00FF 0px 5px 0px;
+        transform: rotate(4deg);
+        /* mix-blend-mode: color-dodge; */
+    }
+
+
+    .marquee-content {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1vw;
+        min-width: 100%;
+        animation: scroll 15s linear infinite;
+        text-shadow: 0vw 0vw 2vw rgba(255, 255, 255, 0.30);
+    }
+
+    .marquee-content span {
+        color: #fff;
+        font-family: "Monument", sans-serif;
+        font-size: 1.5vw;
+        font-weight: 100;
+        text-transform: uppercase;
+        white-space: nowrap;
+
+        /* border: red solid; */
+
+    }
+
+    .starSVG img {
+        /* border: cyan solid; */
+        width: 3vw;
+        height: 3vw;
+        margin: 0 2vw;
+        text-align: center;
+        filter: drop-shadow(0vw 0vw 1.5vw rgb(255, 255, 255, 0.5));
+
+    }
+
+
+
+
+    /* ----------------================SKILLS================---------------- */
+    #skills {
+        /* border: solid red; */
+        /* padding-top: 15vh; */
+    }
+
+    .skills .heading-container {
+        padding-top: 2vw;
+    }
+
+    .skills .back-text {
+
+        color: #FFF;
+        font-family: Michroma;
+        font-size: 6.5vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        opacity: 0.15;
+        white-space: nowrap;
+        transform: translateX(-0.7%);
+    }
+
+    .skills .front-text {
+        color: #FFF;
+        font-family: Syne;
+        font-size: 3vw;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        position: absolute;
+        top: 62%;
+        /* top: 160px; */
+        left: 7.7%;
+        transform: translate(-25%, -50%);
+        z-index: 1;
+        white-space: nowrap;
+
+    }
 
 
 
@@ -1725,8 +1836,90 @@ header a {
         filter: blur(1.5px);
         transition: all 0.5s ease;
     }
+    /* ----------------=====================================---------------- */
+    .marquee {
+        display: flex;
+        overflow: hidden;
+        /* height: 40vh; */
+        background: rgba(0, 0, 0, 0.50);
+        /*if this changes, then all gap need to change ;*/
+        gap: 1vw;
+        padding: 4vw 0vw;
+        border-top: 2px solid rgba(249, 249, 249, 0.14);
+        border-bottom: 2px solid rgba(249, 249, 249, 0.14);
+        box-shadow: #EB00FF 0px 5px 0px;
+        transform: rotate(3deg);
+        /* mix-blend-mode: color-dodge; */
+    }
 
 
+    .marquee-content {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1vw;
+        min-width: 100%;
+        animation: scroll 15s linear infinite;
+        text-shadow: 0vw 0vw 2vw rgba(255, 255, 255, 0.30);
+    }
+
+    .marquee-content span {
+        color: #fff;
+        font-family: "Monument", sans-serif;
+        font-size: 3vw;
+        font-weight: 100;
+        text-transform: uppercase;
+        white-space: nowrap;
+
+        /* border: red solid; */
+
+    }
+
+    .starSVG img {
+        /* border: cyan solid; */
+        width: 5vw;
+        height: 5vw;
+        margin: 0 2vw;
+        text-align: center;
+        filter: drop-shadow(0vw 0vw 1.5vw rgb(255, 255, 255, 0.5));
+
+    }
+
+
+    .skills .back-text {
+        color: #FFF;
+        font-family: Michroma;
+        font-size: 10vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        opacity: 0.15;
+        transform: translateX(14%);
+
+
+    }
+
+    .skills .front-text {
+        color: #FFF;
+        font-family: Syne;
+        font-size: 5vw;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        /* make the h1 element an absolutely positioned element */
+        position: absolute;
+        /* move the h1 element to the center of the container vertically */
+        top: 50%;
+        /* move the h1 element to the center of the container horizontally */
+        left: 41%;
+        /* adjust the h1 element's position based on its own size */
+        transform: translate(-50%, -50%);
+        /* make sure the h1 element is displayed on top of the other h1 element */
+        z-index: 1;
+        white-space: nowrap;
+
+    }
 
 
 
@@ -1810,4 +2003,12 @@ header a {
         padding: 4vw 6vh;
         font-size: 0.8em;
     }
+
+    .skills .heading-container {
+        padding-top: 5vw;
+    }
+    .skills .front-text {
+        top: 65%;
+    }
+
 }

@@ -6,6 +6,7 @@
 
 3. Need to implement scroll trigger on all pages inorder to make the animations visible
 
+4. Need to uncomment `color-dodge` in .marquee
 
 
 -> cursor
