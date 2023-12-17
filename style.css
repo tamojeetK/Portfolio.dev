@@ -5,7 +5,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Syncopate&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Antonio&display=swap');
 /* ---------------===============CUSTOM FONTS===============--------------- */
 @font-face {
     font-family: Roslindale;
@@ -610,6 +611,165 @@ header a {
     /* background-color: red; */
 }
 
+.cards.java {
+    border: 1px solid #DB5631;
+    background: rgba(219, 86, 49, 0.10);
+}
+
+.cards.cpp {
+    border: 1px solid #0B52A5;
+    background: rgba(11, 82, 165, 0.10);
+}
+
+.cards.python {
+    border: 1px solid #0F5F9B;
+    background: rgba(15, 95, 155, 0.10);
+}
+
+.cards.js {
+    border: 1px solid #FFD600;
+    background: rgba(255, 214, 0, 0.10);
+}
+
+.cards.ts {
+    border: 1px solid #0F5F9B;
+    background: rgba(15, 95, 155, 0.10);
+}
+
+.cards.sass {
+    border: 1px solid #ff80a6;
+    background: rgba(235, 0, 255, 0.10);
+}
+
+.cards.react {
+    border: 1px solid #30f1ff;
+    background: rgba(0, 209, 255, 0.10);
+}
+
+.cards.nextJs {
+    border: 1px solid #D9D9D9;
+    background: rgba(217, 217, 217, 0.10);
+}
+
+.cards.bootStrap {
+    border: 1px solid #5604FF;
+    background: rgba(86, 4, 255, 0.10);
+}
+
+.cards.tailwind {
+    border: 1px solid #00b7ff;
+    background: rgba(0, 209, 255, 0.10);
+}
+
+.cards.git {
+    border: 1px solid #FF5C00;
+    background: rgba(255, 92, 0, 0.10);
+}
+
+.cards.figma {
+    border: 1px solid #974dff;
+    background: rgba(125, 70, 255, 0.146);
+}
+
+.cards.ai {
+    border: 1px solid #ff6600;
+    background: rgba(255, 92, 0, 0.10);
+}
+
+.cards.docker {
+    border: 1px solid #00b7ff;
+    background: rgba(0, 209, 255, 0.10);
+}
+
+.java h4 {
+    color: #DB5631
+}
+
+.cpp h4 {
+    color: #0B52A5;
+}
+
+.python h4 {
+    color: #0F5F9B;
+}
+
+.js h4 {
+    color: #FFD600;
+}
+
+.ts h4 {
+    color: #0F5F9B;
+}
+
+.sass h4 {
+    color: #ff80a6;
+}
+
+.react h4 {
+    color: #30f1ff;
+}
+
+.nextJs h4 {
+    color: #D9D9D9;
+}
+
+.bootStrap h4 {
+    color: #5604FF;
+}
+
+.tailwind h4 {
+    color: #00b7ff;
+}
+
+.git h4 {
+    color: #FF5C00;
+}
+
+.figma h4 {
+    color: #974dff;
+}
+
+.ai h4 {
+    color: #ff6600;
+}
+
+.docker h4 {
+    color: #00b7ff;
+}
+
+.tweet {
+    transform: translateY(0.4vw) rotate(10deg);
+}
+
+.linkedin {
+    transform: translateY(0.4vw) rotate(-10deg);
+}
+
+.pinterest {
+    transform: translateY(0.4vw) rotate(10deg);
+}
+
+.insta {
+    transform: translateY(0.4vw) rotate(-20deg);
+}
+
+.medium {
+    transform: translateY(0.4vw) rotate(-5deg);
+}
+
+.github {
+    transform: translateY(0.4vw) rotate(10deg);
+}
+
+footer{
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: auto;
+    transition: .6s ease;
+}
+
+
 /* styles for desktop screens */
 @media only screen and (min-width: 1024px) {
 
@@ -715,7 +875,7 @@ header a {
     /* ------------LANDING-FRAME------------ */
 
     .landing-frame {
-        margin: -5vw 10vw 0px;
+        margin: -15vw 10vw 0px;
         position: absolute;
         /* border: 2px solid red; */
     }
@@ -770,8 +930,8 @@ header a {
     .intro-line {
         /* font-size: 0.5rem; */
         position: absolute;
-        transform: translateY(280%);
-        margin: -2vw 10vw 0px;
+        transform: translateY(180%);
+        margin: -8vw 10vw 0px;
 
         /* border: 2px solid red; */
     }
@@ -799,7 +959,7 @@ header a {
     .para p {
         z-index: 2;
         position: absolute;
-        margin: 15% 34% 15%;
+        margin: 4% 34% 15%;
         text-align: center;
         font-family: 'Roslindale';
         font-size: 1.8vw;
@@ -848,7 +1008,7 @@ header a {
     .intro-img {
         /* width: 50vw; */
         height: 35vh;
-        transform: scale(1.4) translate(53vw, -2vh);
+        transform: scale(1.4) translate(53vw, -15vh);
         mix-blend-mode: color-dodge;
     }
 
@@ -1180,7 +1340,7 @@ header a {
     }
 
     .skills .heading-container {
-        padding-top: 2vw;
+        padding-top: 0vw;
     }
 
     .skills .back-text {
@@ -1207,12 +1367,213 @@ header a {
         top: 62%;
         /* top: 160px; */
         left: 7.7%;
-        transform: translate(-25%, -50%);
+        transform: translate(-25%, -60%);
         z-index: 1;
         white-space: nowrap;
 
     }
 
+    .skills-wrapper {
+        /* border: solid blue; */
+        margin: 0.5vw 10vw auto;
+        display: flex;
+        flex-direction: column;
+        gap: 4vw;
+    }
+
+    .skills-card {
+        /* border: red solid; */
+
+    }
+
+    .skills-heading {
+        font-family: Syncopate;
+        color: white;
+        font-size: 1.2vw;
+        margin-bottom: 0.5vw;
+    }
+
+    .skills-card hr {
+        border: none;
+        height: 2px;
+        background: rgb(255, 255, 255, 0.14);
+    }
+
+    .card-set {
+        /* border: solid rgb(0, 255, 242); */
+        width: 90%;
+        /* height: 100%; */
+        height: calc(100% - 25vw);
+        display: flex;
+        gap: 2vw;
+        align-items: center;
+        transform: translateX(3vw);
+    }
+
+    .cards {
+        margin: 1vw 0vw 0vw;
+        width: 5vw;
+        height: 5vw;
+        border-radius: 1vw;
+        border: 1px solid #73ff00;
+        background: rgba(123, 255, 0, 0.1);
+        backdrop-filter: blur(25px);
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .cards h4 {
+        position: absolute;
+        margin-top: 5.5vw;
+        font-weight: 400;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .card-icon {
+        position: absolute;
+        width: 4vw;
+        top: 50%;
+        /* positions the top edge of the element at the middle of the parent */
+        left: 50%;
+        /* positions the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -45%);
+        /* shifts the element back by half of its width and height */
+    }
+
+    /* ----------------================CONNECT================---------------- */
+    #connect {
+        /* border: solid red; */
+        padding-top: 10vh;
+    }
+
+    .connect .heading-container {
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .connect .back-text {
+
+        color: #FFF;
+        font-family: Michroma;
+        font-size: 6.5vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        opacity: 0.15;
+        white-space: nowrap;
+        transform: translate(-0.5%, 25%);
+    }
+
+    .connect .front-text {
+        color: #FFF;
+        font-family: Syne;
+        font-size: 3vw;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        position: absolute;
+        top: 22%;
+        /* top: 160px; */
+        left: 7.7%;
+        transform: translate(-30%, -25%);
+        z-index: 1;
+        white-space: nowrap;
+    }
+
+    .connect .connect-hand1 {
+        height: 35vh;
+        transform: scale(1.6) translate(1%, 25%);
+        mix-blend-mode: difference;
+    }
+
+    .connect .connect-hand2 {
+        height: 35vh;
+        transform: scale(1.4) translate(100%, 15%);
+        mix-blend-mode: difference;
+    }
+
+    .connect-button-container {
+        /* border: solid red; */
+        display: flex;
+        justify-content: center;
+        transform: translate(0vw, -6vw);
+
+    }
+
+    .connect-button {
+        cursor: pointer;
+        border-radius: 20px;
+        background: #1D93FF;
+        border: #1D93FF solid 1px;
+        padding: 1vw 6vw;
+        white-space: nowrap;
+        color: #000;
+        font-family: Michroma;
+        font-size: 1.2em;
+        font-style: normal;
+        font-weight: 800;
+        transition: 0.3s ease-out;
+        width: fit-content;
+        width: -moz-fit-content;
+    }
+
+    .connect-button a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .onHover {
+        border: 2px solid #2397DE;
+        background: linear-gradient(90deg, #00C7FF 0%, #0084DC 96.21%);
+        box-shadow: -13px -6px 35px 4px rgba(0, 200, 255, 0.29), 11px 11px 38px 1px rgba(0, 22, 47, 0.77);
+    }
+
+    .connect-para {
+        /* border: solid red; */
+        position: absolute;
+        /* margin: 12% 0% 0% 0%; */
+        text-align: center;
+        color: #FFF;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: calc(6px + 1.5vw);
+        font-style: normal;
+        font-weight: 100;
+        transform: translate(26vw, -5vw);
+        /* line-height: calc(12px + 1vw); */
+        white-space: pre-wrap;
+        /* border: #EB00FF solid 2px; */
+    }
+
+    .connect-icons {
+        width: 2.2vw;
+        height: 2.2vw;
+    }
+
+    /* ---------------===============FOOTER===============---------------  */
+
+    footer{
+        width: 100%;
+    }
+
+    footer hr{
+        background: #0084DC;
+        height: 0.3vw;
+        border: none;
+        background: linear-gradient(90deg, #1D93FF 0%, #EB00FF 100%);
+    }
+    .footer-container{
+        /* border: solid red; */
+        display: flex;
+        justify-content: space-between;
+        padding: 3vw 2vw;
+        font-family: 'Antonio', sans-serif;
+        font-weight: lighter;
+        font-size: 1em;
+        text-transform: uppercase;
+        white-space: pre-wrap;
+        letter-spacing: 1px;
+    }
 
 
 }
@@ -1836,6 +2197,7 @@ header a {
         filter: blur(1.5px);
         transition: all 0.5s ease;
     }
+
     /* ----------------=====================================---------------- */
     .marquee {
         display: flex;
@@ -1921,9 +2283,183 @@ header a {
 
     }
 
+    .skills-wrapper {
+        /* border: solid blue; */
+        margin: 25vw 10vw auto;
+        display: flex;
+        flex-direction: column;
+        gap: 15vw;
+
+    }
+
+    .skills-card {
+        /* border: red solid; */
+
+    }
+
+    .skills-heading {
+        font-family: Syncopate;
+        color: white;
+        font-size: 6vw;
+        margin-bottom: 3vw;
+    }
+
+    .skills-card hr {
+        border: none;
+        height: 2px;
+        background: rgb(255, 255, 255, 0.14);
+    }
+
+    .card-set {
+        /* border: solid rgb(0, 255, 242); */
+        width: 90%;
+        margin-top: 5vw;
+        /* height: 100%; */
+        height: calc(100% - 25vw);
+        display: flex;
+        gap: 4vw;
+        align-items: center;
+        transform: translateX(3vw);
+        flex-flow: wrap;
+
+    }
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        /* aligns items horizontally in the center */
+        align-items: center;
+        /* aligns items vertically in the center */
+        width: 12vw;
+        height: 12vw;
+        border-radius: 2.5vw;
+        border: 1px solid #73ff00;
+        background: rgba(123, 255, 0, 0.1);
+        backdrop-filter: blur(25px);
+        position: relative;
+        /* added to position the child .card-icon absolutely */
+    }
+
+    .card-icon {
+        position: absolute;
+        width: 10vw;
+        top: 50%;
+        /* positions the top edge of the element at the middle of the parent */
+        left: 50%;
+        /* positions the left edge of the element at the middle of the parent */
+        transform: translate(-40%, -45%);
+        /* shifts the element back by half of its width and height */
+    }
+
+    .cards img {
+        width: 8vw;
+
+    }
+
+    .cards h4 {
+        display: none;
+    }
 
 
     /* ----------------=====================================---------------- */
+    /* ----------------================PROJECTS================---------------- */
+    .connect .back-text {
+        color: #FFF;
+        font-family: Michroma;
+        font-size: 10vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        opacity: 0.15;
+        transform: translateX(14%);
+
+
+    }
+
+    .connect .front-text {
+        color: #FFF;
+        font-family: Syne;
+        font-size: 5vw;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+        /* make the h1 element an absolutely positioned element */
+        position: absolute;
+        /* move the h1 element to the center of the container vertically */
+        top: 1.1%;
+        /* move the h1 element to the center of the container horizontally */
+        left: 12%;
+        /* adjust the h1 element's position based on its own size */
+        transform: translate(8%, 70%);
+        /* make sure the h1 element is displayed on top of the other h1 element */
+        z-index: 1;
+        white-space: nowrap;
+
+    }
+
+    .connect .connect-hand1 {
+        height: 30vw;
+        transform: scale(1) translate(-5%, 60vw);
+        mix-blend-mode: difference;
+    }
+
+    .connect .connect-hand2 {
+        height: 30vw;
+        transform: scale(1) translate(70%, 55vw);
+        mix-blend-mode: difference;
+    }
+
+    .connect-button-container {
+        /* border: solid red; */
+        display: flex;
+        justify-content: center;
+        transform: translate(15vw, 35vw);
+
+    }
+
+    .connect-button {
+        cursor: pointer;
+        border-radius: 2vw;
+        background: #1D93FF;
+        border: #1D93FF solid 0.1vw;
+        padding: 2vw 5vw;
+        white-space: nowrap;
+        color: #000;
+        font-family: Michroma;
+        font-size: 0.8em;
+        font-style: normal;
+        font-weight: 800;
+        transition: 0.3s ease-out;
+        width: fit-content;
+        width: -moz-fit-content;
+    }
+
+    .connect-button a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    .connect-para {
+        /* border: solid red; */
+        position: absolute;
+        /* margin: 12% 0% 0% 0%; */
+        text-align: center;
+        color: #FFF;
+        font-family: 'Barlow Condensed', sans-serif;
+        font-size: calc(10px + 1.5vw);
+        font-style: normal;
+        font-weight: 100;
+        transform: translate(15vw, 80vw);
+        /* line-height: calc(12px + 1vw); */
+        white-space: pre-wrap;
+        /* border: #EB00FF solid 2px; */
+    }
+
+    .connect-icons {
+        width: 4vw;
+        height: 4vw;
+    }
+
 
 }
 
@@ -2007,8 +2543,13 @@ header a {
     .skills .heading-container {
         padding-top: 5vw;
     }
+
     .skills .front-text {
         top: 65%;
     }
 
+    .skills-wrapper {
+        /* border: solid blue; */
+        margin: 3vw 10vw auto;
+    }
 }

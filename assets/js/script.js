@@ -69,7 +69,7 @@ let letter = '';
 
 
 // Get the button element by its id
-var buttons = document.querySelectorAll(".about-button, .projects-button");
+var buttons = document.querySelectorAll(".about-button, .projects-button, .connect-button");
 
 // Define a function that can add or remove the .onHover class
 function toggleHoverClass(event) {
