@@ -2459,6 +2459,27 @@ footer{
         width: 4vw;
         height: 4vw;
     }
+    /* ---------------===============FOOTER===============---------------  */
+
+    footer hr{
+        background: #0084DC;
+        height: 0.3vw;
+        border: none;
+        background: linear-gradient(90deg, #1D93FF 0%, #EB00FF 100%);
+    }
+    
+    .footer-container{
+        display: flex;
+        /* justify-content: space-between; */
+        padding: 5vw 2vw;
+        gap : 3vw;
+        font-family: 'Antonio', sans-serif;
+        font-weight: 100;
+        font-size: 0.6em;
+        text-transform: uppercase;
+        /* white-space: pre-wrap; */
+        letter-spacing: 1px;
+    }
 
 
 }
@@ -2551,5 +2572,16 @@ footer{
     .skills-wrapper {
         /* border: solid blue; */
         margin: 3vw 10vw auto;
+    }
+    .footer-container{
+        display: flex;
+        /* justify-content: space-between; */
+        padding: 10vw 5vw;
+        /* gap : 4vw; */
+        font-family: 'Antonio', sans-serif;
+        font-size: 0.6em;
+        text-transform: uppercase;
+        /* white-space: pre-wrap; */
+        letter-spacing: 2px;
     }
 }
