@@ -38,17 +38,6 @@ t2.to(".scroll-down-button path:nth-child(1)", {
 // });
 
 
-
-gsap.to("#blob1", {
-  duration: 2,
-  morphSVG: "#blob2",
-  ease: "power1.inOut",
-  repeat: -1,
-  yoyo: true
-});
-
-
-
 // const text = baffle(".about-para");
 // text.set({
 //   // characters: '░▒█ ░▒█>▓ ▒<░█▒ >▒░ ░▒▒█▒ </▓░ ▒▒█ ▓░▒░ ▒▒▓█',
@@ -96,8 +85,3 @@ for (let span of spans) {
   b.start ();
   b.reveal (3000);
 }
-
-
-
-
-
