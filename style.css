@@ -774,6 +774,167 @@ footer {
 
 /* styles for desktop screens */
 @media only screen and (min-width: 1024px) {
+    /* ---------=====Shapes Start=====--------- */
+    .home-shape1,
+    .home-shape2,
+    .home-shape3,
+    .home-shape4,
+    .home-shape5,
+    .home-shape5-mobile,
+    .home-shape6,
+    .home-shape7,
+    .home-shape8,
+    .home-shape9,
+    .home-shape9-2,
+    .home-shape10 ,
+    .home-shape10-2,
+    .home-shape11,
+    .home-shape12,
+    .home-shape13,
+    .home-shape14 {
+        z-index: -10;
+        position: absolute;
+        border-radius: 50%;
+    }
+    .home-shape1,
+    .home-shape2,
+    .home-shape4,
+    .home-shape5,
+    .home-shape7,
+    .home-shape8,
+    .home-shape9,
+    .home-shape11,
+    .home-shape12
+     {
+        filter: blur(190px);
+    }
+    
+    .home-shape5-mobile {
+        filter: blur(190px);
+
+    }
+
+    .home-shape3,
+    .home-shape6,
+    .home-shape10,
+    .home-shape13,
+    .home-shape14    {
+        z-index: -9;
+        filter: blur(80px);
+    }
+
+    .home-shape1 {
+        width: 60vw;
+        /* height: 30vw; */
+        top: -4rem;
+        /* left: -4rem */
+    }
+    .home-shape2 {
+        width: 130vw;
+        top: -25rem;
+        left: -35rem;
+    }
+
+    .home-shape3 {
+        width: 35vw;
+        top: 36rem;
+        right: 30rem;
+    }
+
+    .home-shape4 {
+        width: 20vw;
+        top: 40rem;
+        right: -7rem;
+    }
+
+    .home-shape5 {
+        width: 130vw;
+        top: 10rem;
+        right: -50rem;
+    }
+
+    .home-shape6 {
+        display: none;
+        width: 60vw;
+        top: 36rem;
+        right: -1rem;
+    }
+    
+    .home-shape5-mobile {
+        display: none;
+        width: 180vw;
+        top: 40rem;
+        transform: rotate(250deg);
+        right: -15rem;
+    }
+    
+    .home-shape7 {
+        width: 90vw;
+        top: 60rem;
+        left: -52rem;
+    }
+    .home-shape8 {
+        /* transform: rotate(125deg); */
+        width: 90vw;
+        top: 105rem;
+        right: 55rem;
+    }
+    .home-shape9 {
+        width: 140vw;
+        top: 85rem;
+        left: 35rem;
+    }
+    .home-shape9-2 {
+        width: 40vw;
+        top: 115rem;
+        right: -30rem;
+        filter: blur(80px);
+        
+    }
+    .home-shape10 {
+        display: none;
+
+        width: 120vw;
+        bottom: 85rem;
+        right: 5rem;
+    }
+    .home-shape10-2 {
+        display: none;
+
+        width: 45vw;
+        bottom: 95rem;
+        right: 15rem;
+        filter: blur(30px);
+    }
+    .home-shape11{
+        width: 50vw;
+        bottom: 30rem;
+        left: 80rem;
+        transform: rotate(-15deg);
+
+    }
+    .home-shape12{
+        display: none;
+        width: 120vw;
+        bottom: 28rem;
+        right: 4rem;
+        transform: rotate(45deg);
+    }
+    .home-shape13{
+        width: 200vw;
+        bottom: -50rem;
+        left: -40rem;
+    }
+    .home-shape14{
+        width: 180vw;
+        bottom: -40rem;
+        left: -5rem;
+
+    }
+
+
+
+    /* ---------=====Shapes End=====--------- */
 
     /* -----------------=================NAVBAR=================----------------- */
 
@@ -1584,8 +1745,8 @@ footer {
 
 
 
+/* styles for iPad screens */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    /* styles for iPad screens */
 
 }
 
@@ -2627,6 +2788,7 @@ footer {
     }
 
     .footer-container {
+        position:relative ;
         display: flex;
         justify-content: space-between;
         text-align: left;
