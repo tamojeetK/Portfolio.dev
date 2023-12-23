@@ -477,6 +477,50 @@ svg.about-img {
     }
 }
 
+@keyframes grain {
+
+    0%,
+    to {
+        transform: translate(0)
+    }
+
+    10% {
+        transform: translate(-5%, -10%)
+    }
+
+    20% {
+        transform: translate(-15%, 5%)
+    }
+
+    30% {
+        transform: translate(7%, -25%)
+    }
+
+    40% {
+        transform: translate(-5%, 25%)
+    }
+
+    50% {
+        transform: translate(-15%, 10%)
+    }
+
+    60% {
+        transform: translate(15%)
+    }
+
+    70% {
+        transform: translateY(15%)
+    }
+
+    80% {
+        transform: translate(3%, 35%)
+    }
+
+    90% {
+        transform: translate(-10%, 10%)
+    }
+}
+
 /* ---------------ANIMATION ENDS--------------- */
 
 
@@ -774,8 +818,9 @@ footer {
     width: auto;
     transition: .6s ease;
 }
+
 .home-shape13,
-.home-shape14{
+.home-shape14 {
     position: absolute;
 }
 
@@ -784,19 +829,22 @@ footer {
 
 /* styles for desktop screens */
 @media only screen and (min-width: 1024px) {
-    .home::before{
+    .home::before {
         z-index: -1;
         content: '';
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
+        position: fixed;
+        height: 300%;
+        left: -50%;
+        top: -100%;
+        width: 300%;
+        pointer-events: none;
         background-image: url('./assets/Random.png');
-        /* background-image: url('./assets/402107790_STATIC_NOISE_400.gif'); */
-        background-color: #a8a8a8 ;
+        background-color: #979797;
         mix-blend-mode: multiply;
         background-repeat: repeat;
+        animation: grain 8s steps(10) infinite;
     }
+
     /* ---------=====Shapes Start=====--------- */
     .home-shape1,
     .home-shape2,
@@ -809,7 +857,7 @@ footer {
     .home-shape8,
     .home-shape9,
     .home-shape9-2,
-    .home-shape10 ,
+    .home-shape10,
     .home-shape10-2,
     .home-shape11,
     .home-shape12,
@@ -819,6 +867,7 @@ footer {
         position: absolute;
         border-radius: 50%;
     }
+
     .home-shape1,
     .home-shape2,
     .home-shape4,
@@ -827,11 +876,10 @@ footer {
     .home-shape8,
     .home-shape9,
     .home-shape11,
-    .home-shape12
-     {
+    .home-shape12 {
         filter: blur(200px);
     }
-    
+
     .home-shape5-mobile {
         filter: blur(190px);
 
@@ -841,7 +889,7 @@ footer {
     .home-shape6,
     .home-shape10,
     .home-shape13,
-    .home-shape14    {
+    .home-shape14 {
         z-index: -9;
         filter: blur(100px);
     }
@@ -852,6 +900,7 @@ footer {
         top: -4rem;
         /* left: -4rem */
     }
+
     .home-shape2 {
         width: 130vw;
         top: -25rem;
@@ -882,7 +931,7 @@ footer {
         top: 36rem;
         right: -1rem;
     }
-    
+
     .home-shape5-mobile {
         display: none;
         width: 180vw;
@@ -890,30 +939,34 @@ footer {
         transform: rotate(250deg);
         right: -15rem;
     }
-    
+
     .home-shape7 {
         width: 90vw;
         top: 60rem;
         left: -52rem;
     }
+
     .home-shape8 {
         /* transform: rotate(125deg); */
         width: 90vw;
         top: 105rem;
         right: 55rem;
     }
+
     .home-shape9 {
         width: 140vw;
         top: 85rem;
         left: 35rem;
     }
+
     .home-shape9-2 {
         width: 40vw;
         top: 115rem;
         right: -30rem;
         filter: blur(80px);
-        
+
     }
+
     .home-shape10 {
         display: none;
 
@@ -921,6 +974,7 @@ footer {
         bottom: 85rem;
         right: 5rem;
     }
+
     .home-shape10-2 {
         display: none;
 
@@ -929,26 +983,30 @@ footer {
         right: 15rem;
         filter: blur(30px);
     }
-    .home-shape11{
+
+    .home-shape11 {
         width: 50vw;
         bottom: 30rem;
         left: 80rem;
         transform: rotate(-15deg);
 
     }
-    .home-shape12{
+
+    .home-shape12 {
         display: none;
         width: 120vw;
         bottom: 28rem;
         right: 4rem;
         transform: rotate(45deg);
     }
-    .home-shape13{
+
+    .home-shape13 {
         width: 200vw;
         bottom: -58rem;
         left: -40rem;
     }
-    .home-shape14{
+
+    .home-shape14 {
         width: 180vw;
         bottom: -55rem;
         left: -5rem;
@@ -1208,7 +1266,7 @@ footer {
     .tag-line .tag {
         position: absolute;
         right: -1.5vw;
-        color: #391B40;
+        color: #6a3478;
         font-family: Schoolin;
         font-size: 12vw;
         font-weight: 100;
@@ -1768,23 +1826,24 @@ footer {
 
 
 /* styles for iPad screens */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-
-}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {}
 
 /* styles for mobile screens */
 /* @media only screen and (min-width: 361px) and (max-width: 767px) { */
 @media only screen and (max-width: 767px) {
-    .home::before{
+    .home::before {
         z-index: -5;
         content: '';
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
+        position: fixed;
+        height: 300%;
+        left: -50%;
+        top: -100%;
+        width: 300%;
         background-image: url('./assets/RandomMobile.png');
-        background-color: rgb(169, 169, 169) ;
+        background-color: rgb(169, 169, 169);
         mix-blend-mode: multiply;
+        background-repeat: repeat;
+        animation: grain 8s steps(10) infinite;
     }
 
     .home-shape1,
@@ -1798,7 +1857,7 @@ footer {
     .home-shape8,
     .home-shape9,
     .home-shape9-2,
-    .home-shape10 ,
+    .home-shape10,
     .home-shape10-2,
     .home-shape11,
     .home-shape12,
@@ -1818,8 +1877,7 @@ footer {
     .home-shape8,
     .home-shape9,
     .home-shape11,
-    .home-shape12
-     {
+    .home-shape12 {
         filter: blur(100px);
     }
 
@@ -1832,7 +1890,7 @@ footer {
     .home-shape6,
     .home-shape10,
     .home-shape13,
-    .home-shape14    {
+    .home-shape14 {
         z-index: -9;
         filter: blur(80px);
     }
@@ -1880,57 +1938,67 @@ footer {
         transform: rotate(250deg);
         right: -15rem;
     }
+
     .home-shape7 {
         width: 120vw;
         top: 75rem;
         left: -12rem;
     }
+
     .home-shape8 {
         width: 240vw;
         top: 105rem;
         right: 4rem;
     }
+
     .home-shape9 {
         width: 200vw;
         top: 105rem;
         left: 5rem;
     }
+
     .home-shape9-2 {
         width: 50vw;
         top: 115rem;
         right: -7rem;
         filter: blur(30px);
-        
+
     }
+
     .home-shape10 {
         width: 120vw;
         bottom: 85rem;
         right: 5rem;
     }
+
     .home-shape10-2 {
         width: 45vw;
         bottom: 95rem;
         right: 15rem;
         filter: blur(30px);
     }
-    .home-shape11{
+
+    .home-shape11 {
         width: 120vw;
         bottom: 45rem;
         left: 10rem;
         transform: rotate(-15deg);
     }
-    .home-shape12{
+
+    .home-shape12 {
         width: 120vw;
         bottom: 28rem;
         right: 4rem;
         transform: rotate(45deg);
     }
-    .home-shape13{
+
+    .home-shape13 {
         width: 200vw;
         bottom: -10rem;
         left: -10rem;
     }
-    .home-shape14{
+
+    .home-shape14 {
         width: 180vw;
         bottom: -12rem;
         left: -5rem;
@@ -2829,7 +2897,7 @@ footer {
     }
 
     .footer-container {
-        position:relative ;
+        position: relative;
         display: flex;
         justify-content: space-between;
         text-align: left;
@@ -2849,17 +2917,21 @@ footer {
 /* styles for iPhone SE */
 /* @media only screen and (max-device-width: 375px) and (max-device-height: 667px) { */
 @media only screen and (max-width: 380px) {
-    .home::before{
+    .home::before {
         z-index: -5;
         content: '';
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
+        position: fixed;
+        height: 300%;
+        left: -50%;
+        top: -100%;
+        width: 300%;
         background-image: url('./assets/RandomMobile.png');
-        background-color: rgb(158, 158, 158) ;
-        mix-blend-mode: overlay;
+        background-color: rgb(169, 169, 169);
+        mix-blend-mode: multiply;
+        background-repeat: repeat;
+        animation: grain 8s steps(10) infinite;
     }
+
     .intro-container {
         margin: 2vh 6vw 0px;
         position: relative;
@@ -2889,6 +2961,7 @@ footer {
 
     }
 
+
     .about-img {
         display: flex;
         flex-direction: column;
@@ -2896,7 +2969,14 @@ footer {
         width: 40vw;
         transform: translateY(-2vh);
     }
-
+    .tag-line {
+        transform: translate(-3vw, -6vw);
+        
+        /* border: solid red; */
+    }
+    .tag-line .tag{
+        font-size: 22vw;
+    }
     .about-para {
         color: #FFF;
         font-family: Major Mono Display;
