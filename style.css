@@ -2723,22 +2723,30 @@ footer {
     }
 
     .connect .connect-hand1 {
-        height: 30vw;
-        transform: scale(1) translate(-5%, 60vw);
+        width: 80vw;
+        position: absolute;
+        top: 100vw;
+        left: -10vw;
         mix-blend-mode: difference;
+        transform: rotate(-25deg);
     }
 
     .connect .connect-hand2 {
-        height: 30vw;
-        transform: scale(1) translate(70%, 55vw);
+        width: 80vw;
+        position: absolute;
+        top: 30vw;
+        right: -45vw;
+        /* transform: scale(1) translate(70%, 55vw); */
         mix-blend-mode: difference;
+        transform: rotate(-45deg);
+
     }
 
     .connect-button-container {
         /* border: solid red; */
         display: flex;
         justify-content: center;
-        transform: translate(15vw, 35vw);
+        transform: translate(15vw, 70vw);
 
     }
 
@@ -2771,10 +2779,10 @@ footer {
         /* justify-content: center; */
         color: #FFF;
         font-family: 'Barlow Condensed', sans-serif;
-        font-size: calc(10px + 1.5vw);
+        font-size: calc(10px + 1.2vw);
         font-style: normal;
         font-weight: 100;
-        transform: translate(11.5vw, 80vw);
+        transform: translate(15vw, 112vw);
         /* line-height: calc(12px + 1vw); */
         white-space: pre-wrap;
         /* border: #EB00FF solid 2px; */
