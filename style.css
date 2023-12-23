@@ -15,8 +15,8 @@
 }
 
 @font-face {
-    font-family: Morioka;
-    src: url(./assets/fonts/MoriokaPersonalUsed-8MXyB.otf);
+    font-family: Schoolin;
+    src: url(./assets/fonts/Schoolin.ttf);
 }
 
 @font-face {
@@ -505,7 +505,7 @@ html {
 }
 
 body {
-    background-color: #101010;
+    background-color: #1A1A1A;
 }
 
 #main {
@@ -780,8 +780,23 @@ footer {
 }
 
 
+
+
 /* styles for desktop screens */
 @media only screen and (min-width: 1024px) {
+    .home::before{
+        z-index: -1;
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('./assets/Random.png');
+        /* background-image: url('./assets/402107790_STATIC_NOISE_400.gif'); */
+        background-color: #a8a8a8 ;
+        mix-blend-mode: multiply;
+        background-repeat: repeat;
+    }
     /* ---------=====Shapes Start=====--------- */
     .home-shape1,
     .home-shape2,
@@ -814,7 +829,7 @@ footer {
     .home-shape11,
     .home-shape12
      {
-        filter: blur(190px);
+        filter: blur(200px);
     }
     
     .home-shape5-mobile {
@@ -828,7 +843,7 @@ footer {
     .home-shape13,
     .home-shape14    {
         z-index: -9;
-        filter: blur(80px);
+        filter: blur(100px);
     }
 
     .home-shape1 {
@@ -1186,7 +1201,7 @@ footer {
     .tag-line {
         position: relative;
         /* transform: translateY(500px); */
-        transform: translateY(80vh);
+        transform: translateY(75vh);
         mix-blend-mode: color-dodge;
     }
 
@@ -1194,8 +1209,8 @@ footer {
         position: absolute;
         right: -1.5vw;
         color: #391B40;
-        font-family: Morioka;
-        font-size: 7vw;
+        font-family: Schoolin;
+        font-size: 12vw;
         font-weight: 100;
         line-height: normal;
         white-space: nowrap;
@@ -1760,6 +1775,17 @@ footer {
 /* styles for mobile screens */
 /* @media only screen and (min-width: 361px) and (max-width: 767px) { */
 @media only screen and (max-width: 767px) {
+    .home::before{
+        z-index: -5;
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('./assets/RandomMobile.png');
+        background-color: rgb(169, 169, 169) ;
+        mix-blend-mode: multiply;
+    }
 
     .home-shape1,
     .home-shape2,
@@ -2253,9 +2279,9 @@ footer {
         /* border: solid cyan; */
         /* position: absolute; */
         transform: translateX(2vw);
-        color: #391B40;
-        font-family: Morioka;
-        font-size: 13vw;
+        color: #8f3aa2c7;
+        font-family: Schoolin;
+        font-size: 25vw;
         font-weight: 100;
         line-height: normal;
         white-space: nowrap;
@@ -2823,7 +2849,17 @@ footer {
 /* styles for iPhone SE */
 /* @media only screen and (max-device-width: 375px) and (max-device-height: 667px) { */
 @media only screen and (max-width: 380px) {
-
+    .home::before{
+        z-index: -5;
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('./assets/RandomMobile.png');
+        background-color: rgb(158, 158, 158) ;
+        mix-blend-mode: overlay;
+    }
     .intro-container {
         margin: 2vh 6vw 0px;
         position: relative;
