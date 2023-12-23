@@ -1653,14 +1653,14 @@ footer {
     }
 
     .connect .connect-hand1 {
-        height: 35vh;
+        width: 25vw;
         transform: scale(1.6) translate(1%, 25%);
         mix-blend-mode: difference;
     }
 
     .connect .connect-hand2 {
-        height: 35vh;
-        transform: scale(1.4) translate(100%, 15%);
+        width: 25vw;
+        transform: scale(1.4) translate(130%, 20%);
         mix-blend-mode: difference;
     }
 
@@ -1703,14 +1703,13 @@ footer {
     .connect-para {
         /* border: solid red; */
         position: absolute;
-        /* margin: 12% 0% 0% 0%; */
         text-align: center;
         color: #FFF;
         font-family: 'Barlow Condensed', sans-serif;
         font-size: calc(6px + 1.5vw);
         font-style: normal;
         font-weight: 100;
-        transform: translate(26vw, -5vw);
+        transform: translate(25vw, -3vw);
         /* line-height: calc(12px + 1vw); */
         white-space: pre-wrap;
         /* border: #EB00FF solid 2px; */
