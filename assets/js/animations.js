@@ -1,3 +1,4 @@
+// ------------===========SCROLL-DOWN-BUTTON===========-----------
 var t1 = gsap.timeline();
 t1.to(".scroll-down-button path", {
   y: -15,
@@ -22,32 +23,8 @@ t2.to(".scroll-down-button path:nth-child(1)", {
     yoyo: true
   }, "-=1")
 
-// var scrollDownButton = document.querySelector('.scroll-down-button');
-// var t3 = gsap.timeline({paused: true});
-// t3.to(scrollDownButton, {
-//   duration: 1,
-//   opacity: 0
-// });
 
-// window.addEventListener('scroll', function() {
-//   if (window.scrollY > 0) {
-//     t3.play();
-//   } else {
-//     t3.reverse();
-//   }
-// });
-
-
-// const text = baffle(".about-para");
-// text.set({
-//   // characters: '░▒█ ░▒█>▓ ▒<░█▒ >▒░ ░▒▒█▒ </▓░ ▒▒█ ▓░▒░ ▒▒▓█',
-//     characters: 'qwertyhygv!@#$%^&*()ghbvcxza!@#$%^&*()vcx',
-//   speed: 50
-// });
-// text.start();
-// text.reveal(2000);
-
-
+// ------------===========SPLIT-TEXT-INTRO==========-----------
 // A function to split a text into multiple lines and wrap each line in a span element
 function splitText (text) {
   // Split the text by line breaks
@@ -63,6 +40,8 @@ function splitText (text) {
   return result;
 }
 
+
+// ------------==============ABOUT-PARA==============------------
 // Get the element with the class name 'about-para'
 let element = document.querySelector (".about-para");
 // Get the original text of the element
@@ -85,3 +64,18 @@ for (let span of spans) {
   b.start ();
   b.reveal (3000);
 }
+
+
+// ------------==============LENIS SCROLL==============------------
+const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)

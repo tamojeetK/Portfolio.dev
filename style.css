@@ -641,6 +641,12 @@ header a {
     font-style: normal;
     font-weight: 800;
     line-height: normal;
+    overflow: hidden;
+}
+.front-text .word{
+    /* border: red solid; */
+    display: inline-block;
+    transform: translateY(100%);
 }
 
 .hover-image {
@@ -1315,7 +1321,6 @@ footer {
     }
 
     .about .back-text {
-
         color: #FFF;
         font-family: Michroma;
         font-size: 6.5vw;
@@ -1325,6 +1330,8 @@ footer {
         opacity: 0.15;
         white-space: nowrap;
         transform: translateX(-1%);
+        overflow: hidden;
+
     }
 
     .about .front-text {
@@ -1341,8 +1348,9 @@ footer {
         transform: translate(-50%, -50%);
         z-index: 1;
         white-space: nowrap;
-
+        overflow: hidden;
     }
+    
 
     .about-img {
         position: absolute;
@@ -2969,14 +2977,17 @@ footer {
         width: 40vw;
         transform: translateY(-2vh);
     }
+
     .tag-line {
         transform: translate(-3vw, -6vw);
-        
+
         /* border: solid red; */
     }
-    .tag-line .tag{
+
+    .tag-line .tag {
         font-size: 22vw;
     }
+
     .about-para {
         color: #FFF;
         font-family: Major Mono Display;
