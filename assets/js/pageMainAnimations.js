@@ -34,13 +34,7 @@ sections.forEach(section => {
 
 // ------------------------------------------------------------------------------------
 
-gsap.from(".nav-container .nav-branding, .nav-menu", {
-    y: -100,
-    delay: 0.2,
-    duration: 1,
-    opacity: 0,
-    stagger: 0.3
-})
+// Here need to write GSAp code for Navbar and Landing
 
 var t1 = gsap.timeline();
 t1.from("#intro .landing-frame ", {
