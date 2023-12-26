@@ -17,6 +17,13 @@ document.querySelectorAll(".nav-link").forEach((n) =>
   })
 );
 
+// -----------------------------------Code for Desktop Navbar Blur filter-----------------------------------
+window.addEventListener("scroll", function() {
+  var header = document.querySelector("header");
+  header.classList.toggle("scrolled", window.scrollY > 0);
+});
+
+
 
 
 
