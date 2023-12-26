@@ -136,10 +136,3 @@ projects.forEach(project => {
     hoverImage.style.top = `${event.clientY - 150}px`;
   });
 });
-
-
-// -----------------LENIS SCROLL CODE-----------------
-
-
-
-
