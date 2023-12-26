@@ -94,7 +94,6 @@ backTextSections.forEach(section => {
     );
 });
 // ***************************************************************
-
 let aboutSectionControl = gsap.timeline();
 
 aboutSectionControl
