@@ -59,17 +59,36 @@ t1.from("#intro .landing-frame ", {
         stagger: 0.5
     })
 
+function buttonAnimation() {
+    gsap.fromTo("#about .about-button",
+        {   // From
+            opacity: 0
+        },
+        {   // To
+            scrollTrigger: {
+                trigger: ".about .about-para",
+                start: "10% center",
+                end: "20% center",
+                scrub: 1,
+            },
+            duration: 2,
+            opacity: 1
+        }
+    );
+}
+buttonAnimation();
 // --------------------------------ABOUT-SECTION--------------------------------
 // *************Main Code for front-text animations************* 
 
-let backTextSections = ['#about', '#projects', '#skills', '#connect'];
+let backTextSections = ['.about', '.projects', '.skills', '.connect'];
 
 backTextSections.forEach(section => {
     let sectionControl = gsap.timeline();
 
-    sectionControl.fromTo(`${section} .heading-container .back-text`,
+    // let originalX = parseFloat(window.getComputedStyle(document.querySelector(`${section} .back-text`)).getPropertyValue('transform').split(',')[4].trim());
+    gsap.set(`${section} .back-text`, { x: -400 }); // Set initial position
+    sectionControl.fromTo(`${section} .back-text`,
         {   // From
-            x: -400,
             opacity: 0
         },
         {   // To
@@ -78,10 +97,9 @@ backTextSections.forEach(section => {
                 start: "-150% center",
                 end: "bottom center",
                 scrub: 0.8,
-                // markers: true,
                 toggleActions: "play reverse play reverse"
             },
-            x: '-1%',
+            x: "-1%", // Animate to original position
             duration: 2,
             opacity: 0.15
         }
@@ -107,20 +125,55 @@ aboutSectionControl
             opacity: 1
         }
     )
-    .fromTo("#about .about-button",
+
+// ------------------------------------------------------------------------------------------------
+
+function animateProjectItems() {
+    let scrollTriggerSettings = {
+        trigger: "#projects .project-wrapper",
+        start: "-10% center",
+        end: "20% center",
+        // markers: true,
+        scrub: 2,
+    };
+    gsap.fromTo("#projects .project-item a",
         {   // From
             opacity: 0
         },
         {   // To
-            scrollTrigger: {
-                trigger: ".about .about-para",
-                start: "10% center",
-                end: "20% center",
-                scrub: 1,
-            },
+            scrollTrigger: scrollTriggerSettings,
             duration: 2,
+            delay: 0.6,
             opacity: 1
         }
+    )
+}
+animateProjectItems();
+
+
+function animateArrow() {
+    let scrollTriggerSettings = {
+        trigger: "#projects .project-wrapper",
+        start: "-10% center",
+        end: "20% center",
+        // markers: true,
+        scrub: 5
+    };
+
+    gsap.fromTo("#projects .project-item .arrow",
+        {
+            x: -500,
+        },
+        {
+            scrollTrigger: scrollTriggerSettings,
+            x: 0,
+            duration: 2,
+            stagger: 0.6,
+            delay: 0.6,
+            opacity: 1,
+            ease: "SlowMo.easeinOut"
+        }
     );
-// ------------------------------------------------------------------------------------------------
+}
+animateArrow();
 

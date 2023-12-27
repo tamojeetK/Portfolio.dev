@@ -643,7 +643,8 @@ header a {
     line-height: normal;
     overflow: hidden;
 }
-.front-text .word{
+
+.front-text .word {
     /* border: red solid; */
     display: inline-block;
     transform: translateY(100%);
@@ -1034,7 +1035,7 @@ footer {
         border-radius: 50px 50px 50px 50px;
         transform: translateY(10px);
     }
-    
+
     header.scrolled {
         -webkit-backdrop-filter: blur(75px);
         backdrop-filter: blur(75px);
@@ -1182,8 +1183,9 @@ footer {
     .intro-line {
         /* font-size: 0.5rem; */
         position: absolute;
-        transform: translateY(180%);
-        margin: -8vw 10vw 0px;
+        /* transform: translateY(160%); */
+
+        margin: -3vw 10vw 0px;
 
         /* border: 2px solid red; */
     }
@@ -1306,7 +1308,8 @@ footer {
     }
 
     .about,
-    .projects {
+    .projects,
+    .connect {
         display: flex;
         flex-direction: column;
         position: relative;
@@ -1352,7 +1355,7 @@ footer {
         white-space: nowrap;
         overflow: hidden;
     }
-    
+
 
     .about-img {
         position: absolute;
@@ -1698,16 +1701,21 @@ footer {
     /* ----------------================CONNECT================---------------- */
     #connect {
         /* border: solid red; */
-        padding-top: 10vh;
+        padding-top: 15vh;
     }
 
+    /* .connect{
+    justify-content: space-between;
+
+} */
     .connect .heading-container {
         box-sizing: border-box;
         position: relative;
+        /* border: red solid; */
+        /* translate: transform(-100vw, 30vw); */
     }
 
     .connect .back-text {
-
         color: #FFF;
         font-family: Michroma;
         font-size: 6.5vw;
@@ -1716,7 +1724,9 @@ footer {
         line-height: normal;
         opacity: 0.15;
         white-space: nowrap;
-        transform: translate(-0.5%, 25%);
+        /* left: 20vw; */
+        /* transform: translateY(-10vw); */
+        overflow: hidden;
     }
 
     .connect .front-text {
@@ -1727,12 +1737,13 @@ footer {
         font-weight: 800;
         line-height: normal;
         position: absolute;
-        top: 22%;
+        top: 55%;
         /* top: 160px; */
-        left: 7.7%;
-        transform: translate(-30%, -25%);
+        left: 13.5%;
+        transform: translate(-52%, -50%);
         z-index: 1;
         white-space: nowrap;
+        overflow: hidden;
     }
 
     .connect .connect-hand1 {
@@ -1792,7 +1803,7 @@ footer {
         font-size: calc(6px + 1.5vw);
         font-style: normal;
         font-weight: 100;
-        transform: translate(25vw, -3vw);
+        transform: translate(26vw, 24vw);
         /* line-height: calc(12px + 1vw); */
         white-space: pre-wrap;
         /* border: #EB00FF solid 2px; */
@@ -2210,7 +2221,7 @@ footer {
         flex-direction: column;
         gap: 2vh;
         align-items: center;
-        margin-top: 5vh;
+        margin-top: 10vh;
         /* border: 2px solid red; */
     }
 
@@ -2263,6 +2274,7 @@ footer {
     .intro-line {
         font-size: 1rem;
         position: relative;
+        /* top: -10vw; */
         /* border: 2px solid cyan; */
     }
 
@@ -2370,7 +2382,7 @@ footer {
         /* border: red solid; */
         /* display: flex; */
         /* justify-content: center; */
-        transform: translate(45vw, 10vh);
+        transform: translate(45vw, 25vw);
     }
 
     .scroll-down-button svg {
@@ -2391,7 +2403,8 @@ footer {
     }
 
     .about,
-    .projects {
+    .projects,
+    .connect {
         display: flex;
         flex-direction: column;
     }
@@ -2441,11 +2454,16 @@ footer {
 
     }
 
+    .about-image {
+        /* border: red solid; */
+        margin: 12vw 0 10vw;
+    }
+
     .about-img {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 45vw;
+        width: 35vw;
     }
 
     .about-para {
@@ -2453,10 +2471,10 @@ footer {
         padding: 0% 10% 0%;
         color: #FFF;
         font-family: Major Mono Display;
-        font-size: calc(0.5em + 2vw);
+        font-size: calc(0.5em + 1.5vw);
         font-style: normal;
         font-weight: 100;
-        line-height: calc(12px + 2vw);
+        line-height: calc(12px + 1.8vw);
         white-space: pre-line;
         /* border: #EB00FF solid 2px; */
     }
@@ -2467,15 +2485,15 @@ footer {
         border-radius: 10px;
         background: #1D93FF;
         border: #1D93FF solid 1px;
-        padding: 3vw 5vh;
+        padding: 3vw 8vw;
         white-space: nowrap;
         color: #000;
         font-family: Michroma;
         font-size: 0.7em;
         font-style: normal;
         font-weight: 800;
-        transform: translateY(-8vw);
         transition: 0.3s ease-out;
+        transform: translateY(-20vw);
     }
 
     .about-button a {
@@ -2527,7 +2545,7 @@ footer {
         /* move the h1 element to the center of the container horizontally */
         left: 54%;
         /* adjust the h1 element's position based on its own size */
-        transform: translate(-50%, -50%);
+        transform: translate(-51%, -30%);
         /* make sure the h1 element is displayed on top of the other h1 element */
         z-index: 1;
         white-space: nowrap;
@@ -2535,7 +2553,7 @@ footer {
     }
 
     .project-wrapper {
-        margin-top: 10%;
+        margin-top: 30%;
         overflow: hidden;
         display: flex;
         flex-direction: column;
@@ -2591,14 +2609,15 @@ footer {
 
     .projects-button {
         cursor: pointer;
-        border-radius: 20px;
+        border-radius: 10px;
         background: #1D93FF;
         border: #1D93FF solid 1px;
-        padding: 4vw 7vw;
+        padding: 3vw 8vw;
+
         white-space: nowrap;
         color: #000;
         font-family: Michroma;
-        font-size: 1em;
+        font-size: 0.7em;
         font-style: normal;
         font-weight: 800;
         transition: 0.3s ease-out;
@@ -2677,6 +2696,19 @@ footer {
 
     }
 
+    .skills {
+        justify-content: space-between;
+        align-items: center;
+        /* border: red solid; */
+
+    }
+
+    .skills .heading-container {
+        /* border: #EB00FF solid 2px; */
+        transform: translate(-1%, 5vh);
+        /* make the container a positioned element */
+        position: relative;
+    }
 
     .skills .back-text {
         color: #FFF;
@@ -2686,7 +2718,7 @@ footer {
         font-weight: 400;
         line-height: normal;
         opacity: 0.15;
-        transform: translateX(14%);
+        /* transform: translateX(14%); */
 
 
     }
@@ -2705,7 +2737,7 @@ footer {
         /* move the h1 element to the center of the container horizontally */
         left: 41%;
         /* adjust the h1 element's position based on its own size */
-        transform: translate(-50%, -50%);
+        transform: translate(-75%, -40%);
         /* make sure the h1 element is displayed on top of the other h1 element */
         z-index: 1;
         white-space: nowrap;
@@ -2792,6 +2824,22 @@ footer {
 
     /* ----------------=====================================---------------- */
     /* ----------------================PROJECTS================---------------- */
+    #connect {
+        /* border: solid red; */
+    }
+
+    .connect {
+        justify-content: space-between;
+        align-items: center;
+        /* border: red solid; */
+    }
+
+    .connect .heading-container {
+        /* border: #EB00FF solid 2px; */
+        transform: translate(-20%, 5vh);
+        position: relative;
+    }
+
     .connect .back-text {
         color: #FFF;
         font-family: Michroma;
@@ -2800,9 +2848,7 @@ footer {
         font-weight: 400;
         line-height: normal;
         opacity: 0.15;
-        transform: translateX(14%);
-
-
+        transform: translateX(-30%);
     }
 
     .connect .front-text {
@@ -2819,7 +2865,7 @@ footer {
         /* move the h1 element to the center of the container horizontally */
         left: 12%;
         /* adjust the h1 element's position based on its own size */
-        transform: translate(8%, 70%);
+        transform: translate(-20%, 80%);
         /* make sure the h1 element is displayed on top of the other h1 element */
         z-index: 1;
         white-space: nowrap;
@@ -2829,8 +2875,8 @@ footer {
     .connect .connect-hand1 {
         width: 80vw;
         position: absolute;
-        top: 100vw;
-        left: -10vw;
+        top: 105vw;
+        left: -25vw;
         mix-blend-mode: difference;
         transform: rotate(-25deg);
     }
@@ -2839,7 +2885,7 @@ footer {
         width: 80vw;
         position: absolute;
         top: 30vw;
-        right: -45vw;
+        right: -30vw;
         /* transform: scale(1) translate(70%, 55vw); */
         mix-blend-mode: difference;
         transform: rotate(-45deg);
@@ -2849,8 +2895,11 @@ footer {
     .connect-button-container {
         /* border: solid red; */
         display: flex;
+        position: absolute;
         justify-content: center;
-        transform: translate(15vw, 70vw);
+        bottom: 112vw;
+        /* transform: translateY(-20%); */
+        /* transform: translate(-15vw, 10vw); */
 
     }
 
@@ -2886,7 +2935,9 @@ footer {
         font-size: calc(10px + 1.2vw);
         font-style: normal;
         font-weight: 100;
-        transform: translate(15vw, 112vw);
+        bottom: 40vw;
+        left: 4vw;
+
         /* line-height: calc(12px + 1vw); */
         white-space: pre-wrap;
         /* border: #EB00FF solid 2px; */
@@ -2961,7 +3012,11 @@ footer {
 
     .scroll-down-button {
         position: absolute;
-        transform: translate(45vw, 8vh);
+        transform: translate(46vw, 8vh);
+    }
+
+    .scroll-down-button svg {
+        width: 6vw;
     }
 
     .heading-container {
@@ -2981,7 +3036,7 @@ footer {
     }
 
     .tag-line {
-        transform: translate(-3vw, -6vw);
+        transform: translate(1vw, -6vw);
 
         /* border: solid red; */
     }
