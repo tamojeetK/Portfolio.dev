@@ -242,46 +242,6 @@ function animateSkillCards() {
 animateSkillCards();
 
 // --------------------------------CONNECT-SECTION--------------------------------
-// function animateConnectHands(){
-//     gsap.fromTo("#connect .connect-hand1",
-//     {   // From
-//         x: "-100vw"
-//         // opacity: 0
-//     },
-//     {   // To
-//         scrollTrigger: {
-//             trigger: ".connect .heading-container",
-//             start: "top center",
-//             end: "bottom center",
-//             scrub: 2,
-//             markers: true,
-//             toggleActions: "play reverse play reverse"
-//         },
-//         x: "0%", // Animate to original position
-//         duration: 2,
-//         delay: 0.6
-//     });
-
-//     gsap.fromTo("#connect .connect-hand2",
-//     {   // From
-//         x: "100vw"
-//         // opacity: 0
-//     },
-//     {   // To
-//         scrollTrigger: {
-//             trigger: ".connect .heading-container",
-//             start: "top center",
-//             end: "bottom center",
-//             scrub: 2,
-//             markers: true,
-//             toggleActions: "play reverse play reverse"
-//         },
-//         x: '190%', // Animate to original position
-//         duration: 4,
-//         delay: 0.6
-//     });
-// }
-// animateConnectHands();
 function animateConnectHands(){
     ScrollTrigger.matchMedia({
         "(min-width: 1024px)": function() {
@@ -295,7 +255,7 @@ function animateConnectHands(){
                     start: "top center",
                     end: "bottom center",
                     scrub: 2,
-                    markers: true,
+                    // markers: true,
                     toggleActions: "play reverse play reverse"
                 },
                 x: "0%", // Animate to original position
@@ -313,7 +273,7 @@ function animateConnectHands(){
                     start: "top center",
                     end: "bottom center",
                     scrub: 2,
-                    markers: true,
+                    // markers: true,
                     toggleActions: "play reverse play reverse"
                 },
                 x: '190%', // Animate to original position
@@ -339,7 +299,7 @@ function animateConnectHandsMoBL(){
                     start: "top center",
                     end: "180vw center",
                     scrub: 2,
-                    markers: true,
+                    // markers: true,
                     toggleActions: "play reverse play reverse"
                 },
                 x: "0%",
