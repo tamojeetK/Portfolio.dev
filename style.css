@@ -1561,8 +1561,8 @@ footer {
         justify-content: space-between;
         gap: 1vw;
         min-width: 100%;
-        animation: scroll 15s linear infinite;
-        text-shadow: 0vw 0vw 2vw rgba(255, 255, 255, 0.30);
+        animation: scroll 10s linear infinite;
+        text-shadow: 0vw 0vw 2vw rgba(255, 255, 255, 0.80);
     }
 
     .marquee-content span {
@@ -1583,7 +1583,7 @@ footer {
         height: 3vw;
         margin: 0 2vw;
         text-align: center;
-        filter: drop-shadow(0vw 0vw 1.5vw rgb(255, 255, 255, 0.5));
+        filter: drop-shadow(0vw 0vw 1.5vw rgb(255, 255, 255, 0.8));
 
     }
 

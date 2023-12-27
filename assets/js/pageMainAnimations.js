@@ -81,7 +81,7 @@ t1.from("#intro .landing-frame ", {
         );
     }
     
-    // Apply the animation to all buttons
+    // Applying the animation to all buttons
     buttonAnimation("#about .about-button", ".about .about-para");
     buttonAnimation(".projects-button", ".projects .project-wrapper");
     buttonAnimation(".connect-button", ".connect-hand2");
@@ -137,6 +137,8 @@ aboutSectionControl
 
 // ------------------------------------------------------------------------------------------------
 
+// --------------------------------PROJECTS-SECTION--------------------------------
+
 function animateProjectItems() {
     let scrollTriggerSettings = {
         trigger: "#projects .project-wrapper",
@@ -186,3 +188,57 @@ function animateArrow() {
 }
 animateArrow();
 
+// ------------------------------------------------------------------------------------------------
+
+// --------------------------------SKILLS-SECTION--------------------------------
+function animateSkillsHeader() {
+    let scrollTriggerSettings = {
+        trigger: "#skills .skills-wrapper",
+        start: "-10% center",
+        end: "20% center",
+        // markers: true,
+        scrub: 2,
+    };
+    gsap.fromTo("#skills .skills-heading",
+        {   // From
+            opacity: 0
+        },
+        {   // To
+            scrollTrigger: scrollTriggerSettings,
+            duration: 2,
+            stagger: 1,
+            delay: 0.6,
+            opacity: 1
+        }
+    )
+}
+animateSkillsHeader();
+
+function animateSkillCards() {
+    let scrollTriggerSettings = {
+        trigger: "#skills .skills-wrapper",
+        start: "-10% center",
+        end: "30% center",
+        // markers: true,
+        scrub: 6
+    };
+
+    gsap.fromTo("#skills .card-set .cards",
+        {
+            x: -100,
+            opacity: 0
+        },
+        {
+            scrollTrigger: scrollTriggerSettings,
+            x: 0,
+            duration: 2,
+            stagger: 1,
+            delay: 0.4,
+            opacity: 1,
+            ease: "SlowMo.easeinOut"
+        }
+    );
+}
+animateSkillCards();
+
+// --------------------------------CONNECT-SECTION--------------------------------
