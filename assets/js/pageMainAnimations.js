@@ -59,24 +59,33 @@ t1.from("#intro .landing-frame ", {
         stagger: 0.5
     })
 
-function buttonAnimation() {
-    gsap.fromTo("#about .about-button",
-        {   // From
-            opacity: 0
-        },
-        {   // To
-            scrollTrigger: {
-                trigger: ".about .about-para",
-                start: "10% center",
-                end: "20% center",
-                scrub: 1,
+    function buttonAnimation(buttonSelector, triggerSelector) {
+        gsap.fromTo(buttonSelector,
+            {   // From
+                opacity: 0
             },
-            duration: 2,
-            opacity: 1
-        }
-    );
-}
-buttonAnimation();
+            {   // To
+                scrollTrigger: {
+                    trigger: triggerSelector,
+                    start: "10% center",
+                    end: "20% center",
+                    // markers: true,
+                    scrub: 1,
+                },
+                delay: 0.8,
+                stagger: 0.5,
+                scrub: 0.9,
+                duration: 4,
+                opacity: 1
+            }
+        );
+    }
+    
+    // Apply the animation to all buttons
+    buttonAnimation("#about .about-button", ".about .about-para");
+    buttonAnimation(".projects-button", ".projects .project-wrapper");
+    buttonAnimation(".connect-button", ".connect-hand2");
+    
 // --------------------------------ABOUT-SECTION--------------------------------
 // *************Main Code for front-text animations************* 
 

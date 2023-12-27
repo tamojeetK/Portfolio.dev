@@ -1390,7 +1390,7 @@ footer {
         border-radius: 20px;
         background: #1D93FF;
         border: #1D93FF solid 1px;
-        padding: 1vw 2vw;
+        padding: 1vw 3vw;
         white-space: nowrap;
         color: #000;
         font-family: Michroma;
@@ -1400,8 +1400,8 @@ footer {
         transition: 0.3s ease-out;
         width: fit-content;
         width: -moz-fit-content;
-        transform: translateX(8.5vw);
-        top: calc(100% + -12%);
+        transform: translateX(7.5vw);
+        top: calc(100% + -11%);
 
     }
 
@@ -1526,7 +1526,7 @@ footer {
         width: fit-content;
         width: -moz-fit-content;
         margin-top: 2vw;
-        margin-bottom: 2vw;
+        margin-bottom: 4vw;
     }
 
     .projects-button a {
