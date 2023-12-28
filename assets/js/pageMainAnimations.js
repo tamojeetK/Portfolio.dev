@@ -8,14 +8,16 @@ function headerAnimation() {
     gsap.fromTo("#header .nav-item",
         {
             y: -100,
-            opacity: 0
+            opacity: 0,
+            filter: "blur(50px)",
+
         },
         {
             y: 0,
-            duration: 0.6,
+            duration: 0.8,
             stagger: 0.2,
-            scrub: 3,
-            delay: 1,
+            filter: "blur(0px)",
+            delay: 0.6,
             opacity: 1,
             ease: "SlowMo.easeinOut"
         }
@@ -26,17 +28,17 @@ function headerAnimation() {
 function logoAnimation() {
     gsap.from("#header .nav-branding", {
         // y: -100,
-        scale: 0,
+        // scale: 0,
+        filter: "blur(40px)",
         duration: 0.4,
-        scrub: 6,
         delay: 0.8,
         opacity: 1
     })
 }
+logoAnimation();
 
 if (window.matchMedia("(min-width: 1024px)").matches) {
     headerAnimation();
-    logoAnimation();
 }
 // --------------------------------Intro-container Animation--------------------------------
 let introSet = gsap.timeline();
@@ -44,47 +46,65 @@ function introContainerAnimation() {
     introSet.from("#intro .landing-frame h2, #intro .landing-frame .text-1, #intro .landing-frame .text-2", {
         x: -100,
         duration: 1,
+        filter: "blur(40px)",
         stagger: 0.3,
         opacity: -5
     });
-
+    introSet.from("#intro .intro-line", {
+        duration: 1,
+        opacity: -5
+    })
     introSet.from("#intro .landing-frame .text-2-card", {
         scale: 0,
         duration: 0.8,
         stagger: 0.3,
-        opacity: -5
+        opacity: -5,
+        filter: "blur(80px)",
+
         // }, "+=0.2");
     });
-    introSet.from("#intro .intro-line", {
-        // x: -50,
-        duration: 1,
-        // stagger: 0.3,
-        opacity: -5
+    // introSet.fromTo("#intro .intro-img", {
+    //     opacity: 0,
+    //     x: -100,
+    // },
+    //     {
+    //         opacity: 1,
+    //         duration: 0.8,
+    //         stagger: 0.3,
+    //     });
+    introSet.from("#intro .intro-img", {
+        opacity: -10,
+        scale: 0,
+        duration: 0.2,
+    });
+    gsap.from("#intro .scroll-down-button", {
+
+        duration: 2,
+        delay: 1,
+        filter: "blur(40px)",
+        scale: 0,
+        opacity: 0
     })
 
 }
 introContainerAnimation();
 
 function landingFrameAnimation() {
-    gsap.from("#intro p .word , #intro p span", {
+    gsap.from("#intro p span", {
         duration: 1,
         delay: 0.2,
         opacity: 0,
+        filter: "blur(40px)",
+
         stagger: 0.06,
         ease: "power1.inOut"
     })
 
-    gsap.fromTo("#intro .intro-img", {
-        opacity: 0
 
-    },
-        {
-            opacity: 1,
-            duration: 0.8,
-            stagger: 0.3,
-        });
 }
 landingFrameAnimation()
+
+
 // ------------------------------Main Code for front-text animations------------------------------ 
 const sections = ['.about', '.projects', '.skills', '.connect'];
 
