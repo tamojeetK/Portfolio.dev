@@ -2,6 +2,89 @@ Splitting();
 gsap.registerPlugin(ScrollTrigger);
 
 
+// ------------------------------INTRO-PAGE Animations------------------------------
+
+function headerAnimation() {
+    gsap.fromTo("#header .nav-item",
+        {
+            y: -100,
+            opacity: 0
+        },
+        {
+            y: 0,
+            duration: 0.6,
+            stagger: 0.2,
+            scrub: 3,
+            delay: 1,
+            opacity: 1,
+            ease: "SlowMo.easeinOut"
+        }
+    );
+
+}
+// ---------------Logo Animation---------------
+function logoAnimation() {
+    gsap.from("#header .nav-branding", {
+        // y: -100,
+        scale: 0,
+        duration: 0.4,
+        scrub: 6,
+        delay: 0.8,
+        opacity: 1
+    })
+}
+
+if (window.matchMedia("(min-width: 1024px)").matches) {
+    headerAnimation();
+    logoAnimation();
+}
+// --------------------------------Intro-container Animation--------------------------------
+let introSet = gsap.timeline();
+function introContainerAnimation() {
+    introSet.from("#intro .landing-frame h2, #intro .landing-frame .text-1, #intro .landing-frame .text-2", {
+        x: -100,
+        duration: 1,
+        stagger: 0.3,
+        opacity: -5
+    });
+
+    introSet.from("#intro .landing-frame .text-2-card", {
+        scale: 0,
+        duration: 0.8,
+        stagger: 0.3,
+        opacity: -5
+        // }, "+=0.2");
+    });
+    introSet.from("#intro .intro-line", {
+        // x: -50,
+        duration: 1,
+        // stagger: 0.3,
+        opacity: -5
+    })
+
+}
+introContainerAnimation();
+
+function landingFrameAnimation() {
+    gsap.from("#intro p .word , #intro p span", {
+        duration: 1,
+        delay: 0.2,
+        opacity: 0,
+        stagger: 0.06,
+        ease: "power1.inOut"
+    })
+
+    gsap.fromTo("#intro .intro-img", {
+        opacity: 0
+
+    },
+        {
+            opacity: 1,
+            duration: 0.8,
+            stagger: 0.3,
+        });
+}
+landingFrameAnimation()
 // ------------------------------Main Code for front-text animations------------------------------ 
 const sections = ['.about', '.projects', '.skills', '.connect'];
 
@@ -36,56 +119,34 @@ sections.forEach(section => {
 
 // Here need to write GSAp code for Navbar and Landing
 
-var t1 = gsap.timeline();
-t1.from("#intro .landing-frame ", {
-    y: -200,
-    duration: 1,
-    delay: 0.5,
-    opacity: 0,
-    stagger: 0.5
-})
-    .from("#intro .intro-line", {
-        y: 800,
-        duration: 1,
-        delay: 0.5,
-        opacity: 0,
-        stagger: 0.5
-    })
-    .from("#intro .tag-line", {
-        right: -200,
-        duration: 1,
-        delay: 0.5,
-        opacity: 0,
-        stagger: 0.5
-    })
 
-    function buttonAnimation(buttonSelector, triggerSelector) {
-        gsap.fromTo(buttonSelector,
-            {   // From
-                opacity: 0
+function buttonAnimation(buttonSelector, triggerSelector) {
+    gsap.fromTo(buttonSelector,
+        {   // From
+            opacity: 0
+        },
+        {   // To
+            scrollTrigger: {
+                trigger: triggerSelector,
+                start: "10% center",
+                end: "20% center",
+                // markers: true,
+                scrub: 1,
             },
-            {   // To
-                scrollTrigger: {
-                    trigger: triggerSelector,
-                    start: "10% center",
-                    end: "20% center",
-                    // markers: true,
-                    scrub: 1,
-                },
-                delay: 0.8,
-                stagger: 0.5,
-                scrub: 0.9,
-                duration: 4,
-                opacity: 1
-            }
-        );
-    }
-    
-    // Applying the animation to all buttons
-    buttonAnimation("#about .about-button", ".about .about-para");
-    buttonAnimation(".projects-button", ".projects .project-wrapper");
-    buttonAnimation(".connect-button", ".connect-hand2");
-    
+            delay: 0.8,
+            stagger: 0.5,
+            scrub: 0.9,
+            duration: 4,
+            opacity: 1
+        }
+    );
+}
+
+// Applying the animation to all buttons
+buttonAnimation("#about .about-button", ".about .about-para");
+buttonAnimation(".projects-button", ".projects .project-wrapper");
+buttonAnimation(".connect-button", ".connect-hand2");
+
 // --------------------------------ABOUT-SECTION--------------------------------
 // *************Main Code for back-text animations************* 
 
@@ -242,92 +303,92 @@ function animateSkillCards() {
 animateSkillCards();
 
 // --------------------------------CONNECT-SECTION--------------------------------
-function animateConnectHands(){
+function animateConnectHands() {
     ScrollTrigger.matchMedia({
-        "(min-width: 1024px)": function() {
+        "(min-width: 1024px)": function () {
             gsap.fromTo("#connect .connect-hand1",
-            {   // From
-                x: "-100vw"
-            },
-            {   // To
-                scrollTrigger: {
-                    trigger: ".connect .heading-container",
-                    start: "top center",
-                    end: "bottom center",
-                    scrub: 2,
-                    // markers: true,
-                    toggleActions: "play reverse play reverse"
+                {   // From
+                    x: "-100vw"
                 },
-                x: "0%", // Animate to original position
-                duration: 2,
-                delay: 0.6
-            });
+                {   // To
+                    scrollTrigger: {
+                        trigger: ".connect .heading-container",
+                        start: "top center",
+                        end: "bottom center",
+                        scrub: 2,
+                        // markers: true,
+                        toggleActions: "play reverse play reverse"
+                    },
+                    x: "0%", // Animate to original position
+                    duration: 2,
+                    delay: 0.6
+                });
 
             gsap.fromTo("#connect .connect-hand2",
-            {   // From
-                x: "100vw"
-            },
-            {   // To
-                scrollTrigger: {
-                    trigger: ".connect .heading-container",
-                    start: "top center",
-                    end: "bottom center",
-                    scrub: 2,
-                    // markers: true,
-                    toggleActions: "play reverse play reverse"
+                {   // From
+                    x: "100vw"
                 },
-                x: '190%', // Animate to original position
-                duration: 4,
-                delay: 0.6
-            });
+                {   // To
+                    scrollTrigger: {
+                        trigger: ".connect .heading-container",
+                        start: "top center",
+                        end: "bottom center",
+                        scrub: 2,
+                        // markers: true,
+                        toggleActions: "play reverse play reverse"
+                    },
+                    x: '190%', // Animate to original position
+                    duration: 4,
+                    delay: 0.6
+                });
         }
     });
 }
 animateConnectHands();
 
-function animateConnectHandsMoBL(){
+function animateConnectHandsMoBL() {
     ScrollTrigger.matchMedia({
-        "(max-width: 767px)": function() {
+        "(max-width: 767px)": function () {
             gsap.fromTo("#connect .connect-hand1",
-            {   // From
-                x: "-100vw",
-                y: "100vh"
-            },
-            {   // To
-                scrollTrigger: {
-                    trigger: ".connect .heading-container",
-                    start: "top center",
-                    end: "180vw center",
-                    scrub: 2,
-                    // markers: true,
-                    toggleActions: "play reverse play reverse"
+                {   // From
+                    x: "-100vw",
+                    y: "100vh"
                 },
-                x: "0%",
-                y: "0%",
-                stagger: 0.4,
-                duration: 2,
-                delay: 0.6
-            });
+                {   // To
+                    scrollTrigger: {
+                        trigger: ".connect .heading-container",
+                        start: "top center",
+                        end: "180vw center",
+                        scrub: 2,
+                        // markers: true,
+                        toggleActions: "play reverse play reverse"
+                    },
+                    x: "0%",
+                    y: "0%",
+                    stagger: 0.4,
+                    duration: 2,
+                    delay: 0.6
+                });
 
             gsap.fromTo("#connect .connect-hand2",
-            {   // From
-                x: "100vw",
-                y: "-100vh"
-            },
-            {   // To
-                scrollTrigger: {
-                    trigger: ".connect .heading-container",
-                    start: "top center",
-                    end: "bottom center",
-                    scrub: 2,
-                    // markers: true,
-                    toggleActions: "play reverse play reverse"
+                {   // From
+                    x: "100vw",
+                    y: "-100vh"
                 },
-                x: '-5%', // Animate to original position
-                y: '0%', // Animate to original position
-                duration: 4,
-                delay: 0.6
-            });
+                {   // To
+                    scrollTrigger: {
+                        trigger: ".connect .heading-container",
+                        start: "top center",
+                        end: "bottom center",
+                        scrub: 2,
+                        // markers: true,
+                        toggleActions: "play reverse play reverse"
+                    },
+                    x: '-5%', // Animate to original position
+                    y: '0%', // Animate to original position
+                    duration: 4,
+                    delay: 0.6
+                });
         }
     });
 }

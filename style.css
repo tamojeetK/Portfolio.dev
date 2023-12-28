@@ -650,6 +650,7 @@ header a {
     transform: translateY(100%);
 }
 
+
 .hover-image {
     position: absolute;
     height: 350px;
@@ -1168,7 +1169,7 @@ footer {
 
 
     .text-2-card {
-        /* z-index: -1; */
+        /* z-index: -10; */
         position: absolute;
         /* left: 1.2vw; */
         transform: translate(-75%, -23%);
