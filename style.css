@@ -650,6 +650,9 @@ header a {
     transform: translateY(100%);
 }
 
+.text-2 {
+    cursor: pointer;
+}
 
 .hover-image {
     position: absolute;
@@ -1176,10 +1179,8 @@ footer {
         /* transform: translateY(-23%); */
         width: 62vw;
         height: 6vw;
+        overflow: hidden;
     }
-
-
-
 
     .intro-line {
         /* font-size: 0.5rem; */
@@ -1854,7 +1855,7 @@ footer {
 /* styles for mobile screens */
 /* @media only screen and (min-width: 361px) and (max-width: 767px) { */
 @media only screen and (max-width: 767px) {
-    
+
     .home::before {
         z-index: -5;
         content: '';
@@ -2305,7 +2306,7 @@ footer {
     /* ------------PARA------------ */
     .para p {
         position: relative;
-        margin: 10px 8vw 0px;
+        margin: 10px 10vw 0px;
         padding: 0px 0vw 0px;
         flex-shrink: 0;
         text-align: center;
@@ -3014,8 +3015,9 @@ footer {
     }
 
     .scroll-down-button {
+        /* border: red solid; */
         position: absolute;
-        transform: translate(46vw, 8vh);
+        transform: translate(47vw, 14vw);
     }
 
     .scroll-down-button svg {
@@ -3096,15 +3098,17 @@ footer {
         /* border: solid blue; */
         margin: 3vw 10vw auto;
     }
+
     .connect-button-container {
         /* border: solid red; */
-        bottom:74vw;
+        bottom: 74vw;
     }
+
     .connect-para {
         /* border: solid red; */
         bottom: -1vw;
-        left:1vw;
-    }   
+        left: 1vw;
+    }
 
     .footer-container {
         display: flex;
@@ -3122,14 +3126,16 @@ footer {
 
 /* Samsung Galaxy S8+ */
 @media screen and (device-width: 360px) and (device-height: 740px) and (-webkit-device-pixel-ratio: 4) {
+
     /* CSS rules for Samsung Galaxy S8+ */
     .connect-button-container {
         /* border: solid red; */
-        bottom:100vw;
+        bottom: 100vw;
     }
+
     .connect-para {
         /* border: solid red; */
         bottom: 20vw;
-        left:1vw;
-    }   
+        left: 1vw;
+    }
 }

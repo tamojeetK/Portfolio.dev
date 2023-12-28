@@ -103,21 +103,34 @@ const text2 = document.querySelector(".text-2");
 
 
 // -----------===========GLITCH EFFECT==============----------------
-// function toggleGlitchEffect(event) {
-//   if (event.type == "mouseover") {
-//     text2.classList.add("glitch");
-//     text2.classList.add("layers");
-//   } else if (event.type == "mouseout") {
-//     text2.classList.remove("glitch");
-//     text2.classList.remove("layers");
-//   }
-// }
+let animationDone = false;
 
-// text2.addEventListener("mouseover", toggleGlitchEffect);
-// text2.addEventListener("mouseout", toggleGlitchEffect);
+// Start the animation
 text2.classList.add("glitch");
 text2.classList.add("paths");
 text2.classList.add("layers");
+
+// Use setTimeout to remove the classes after 4 seconds
+setTimeout(function() {
+    text2.classList.remove("glitch");
+    text2.classList.remove("paths");
+    text2.classList.remove("layers");
+    animationDone = true; // Set the flag to true after the initial animation is done
+}, 4000); // 6000 milliseconds = 4 seconds
+
+function toggleGlitchEffect(event) {
+  if (!animationDone) return; // If the initial animation is not done, do nothing
+  if (event.type == "mouseover") {
+    text2.classList.add("glitch");
+    text2.classList.add("layers");
+  } else if (event.type == "mouseout") {
+    text2.classList.remove("glitch");
+    text2.classList.remove("layers");
+  }
+}
+
+text2.addEventListener("mouseover", toggleGlitchEffect);
+text2.addEventListener("mouseout", toggleGlitchEffect);
 
 
 

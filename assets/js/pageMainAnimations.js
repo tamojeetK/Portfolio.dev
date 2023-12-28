@@ -47,7 +47,7 @@ function introContainerAnimation() {
         x: -100,
         duration: 1,
         filter: "blur(40px)",
-        stagger: 0.3,
+        stagger: 0.1, // Reduced stagger time
         opacity: -5
     });
     introSet.from("#intro .intro-line", {
@@ -55,39 +55,42 @@ function introContainerAnimation() {
         opacity: -5
     })
     introSet.from("#intro .landing-frame .text-2-card", {
-        scale: 0,
-        duration: 0.8,
-        stagger: 0.3,
-        opacity: -5,
-        filter: "blur(80px)",
-
-        // }, "+=0.2");
+        // scale: 0,
+        duration: 3,
+        stagger: 0.1, // Reduced stagger time
+        transformOrigin: "center center",
+        opacity: 0,
+        // filter: "blur(80px)",
     });
-    // introSet.fromTo("#intro .intro-img", {
-    //     opacity: 0,
-    //     x: -100,
-    // },
-    //     {
-    //         opacity: 1,
-    //         duration: 0.8,
-    //         stagger: 0.3,
-    //     });
-    introSet.from("#intro .intro-img", {
-        opacity: -10,
-        scale: 0,
-        duration: 0.2,
-    });
-    gsap.from("#intro .scroll-down-button", {
 
+    gsap.from("#intro .intro-img", {
+        opacity: 0,
+        scale: 1.2,
+        transformOrigin: "center center",
         duration: 2,
-        delay: 1,
+        delay: 0.8,
+        filter: "hue-rotate(80deg)"
+
+    });
+    introSet.from("#intro .tag-line .word .char", {
+        // delay: 0.4,
+        transformOrigin: "top bottom",
+        duration: 2,
+        stagger: 0.4,
+        opacity: 0,
+        // filter: "blur(40px)",
+        filter: "hue-rotate(80deg)"
+
+    })
+    introSet.from("#intro .scroll-down-button", {
+        duration: 1,
         filter: "blur(40px)",
         scale: 0,
         opacity: 0
     })
-
 }
 introContainerAnimation();
+
 
 function landingFrameAnimation() {
     gsap.from("#intro p span", {
