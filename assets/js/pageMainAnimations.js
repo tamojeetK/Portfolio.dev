@@ -63,20 +63,28 @@ function introContainerAnimation() {
         // filter: "blur(80px)",
     });
 
-    gsap.from("#intro .intro-img", {
+    let imgAnimate = gsap.timeline();
+
+    imgAnimate.from("#intro .intro-img", {
         opacity: 0,
-        scale: 1.2,
-        transformOrigin: "center center",
+        filter: "hue-rotate(80deg)",
         duration: 2,
-        delay: 0.8,
-        filter: "hue-rotate(80deg)"
+        delay: 0.8
+    })
+    .from("#intro .intro-img", {
+        y: -200,
+        repeat: -1,
+        duration: 2.5,
+        yoyo: true,
+        ease: "power1.inOut"
 
     });
+    
     introSet.from("#intro .tag-line .word .char", {
         // delay: 0.4,
         transformOrigin: "top bottom",
-        duration: 2,
-        stagger: 0.4,
+        duration: 1,
+        stagger: 0.8,
         opacity: 0,
         // filter: "blur(40px)",
         filter: "hue-rotate(80deg)"

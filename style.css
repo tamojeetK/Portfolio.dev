@@ -1264,8 +1264,8 @@ footer {
     .intro-img {
         /* width: 50vw; */
         height: 35vh;
-        transform: scale(1.4) translate(53vw, -15vh);
-        mix-blend-mode: color-dodge;
+        transform: scale(1.4) translate(48vw, -15vh);
+        /* mix-blend-mode: difference; */
     }
 
     .tag-line {
