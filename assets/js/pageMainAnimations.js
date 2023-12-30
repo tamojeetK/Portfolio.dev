@@ -47,57 +47,93 @@ function introContainerAnimation() {
         x: -100,
         duration: 1,
         filter: "blur(40px)",
-        stagger: 0.1, // Reduced stagger time
+        stagger: 0.3, // Stagger time
         opacity: -5
     });
     introSet.from("#intro .intro-line", {
         duration: 1,
-        opacity: -5
+        opacity: -5,
+        delay: 0.3 // Add delay equal to the stagger time of the previous animation
     })
     introSet.from("#intro .landing-frame .text-2-card", {
         // scale: 0,
         duration: 3,
-        stagger: 0.1, // Reduced stagger time
+        stagger: 0.1, // Stagger time
         transformOrigin: "center center",
         opacity: 0,
         // filter: "blur(80px)",
+        delay: 0.3 // Add delay equal to the stagger time of the previous animation
     });
 
     let imgAnimate = gsap.timeline();
 
-    imgAnimate.from("#intro .intro-img", {
-        opacity: 0,
-        filter: "hue-rotate(80deg)",
-        duration: 2,
-        delay: 0.8
-    })
-    .from("#intro .intro-img", {
-        y: -200,
-        repeat: -1,
-        duration: 2.5,
-        yoyo: true,
-        ease: "power1.inOut"
+    if (window.matchMedia("(max-width: 767px)").matches) {
+        // The viewport is less than 767 pixels wide
+        imgAnimate.from("#intro .intro-img", {
+            opacity: 0,
+            filter: "hue-rotate(80deg)",
+            duration: 5,
+            delay: 0.8,
+        })
+            .from("#intro .intro-img", {
+                y: -20,
+                repeat: -1,
+                duration: 2.5,
+                yoyo: true,
+                ease: "power1.inOut"
+            });
+        imgAnimate.from("#intro .intro-img.coding", {
+            // filter: "hue-rotate(100deg)",
+            duration: 5,
+            delay: 0.8,
+        });
+    } else {
+        imgAnimate.from("#intro .intro-img", {
+            opacity: 0,
+            filter: "hue-rotate(80deg)",
+            duration: 5,
+            delay: 0.8,
 
-    });
-    
-    introSet.from("#intro .tag-line .word .char", {
+        })
+            .from("#intro .intro-img", {
+                y: -200,
+                repeat: -1,
+                duration: 2.5,
+                yoyo: true,
+                ease: "power1.inOut"
+            });
+        imgAnimate.from("#intro .intro-img.coding", {
+            // filter: "hue-rotate(80deg)",
+            duration: 5,
+            delay: 1,
+        })
+    }
+
+
+
+
+    gsap.from("#intro .tag-line .word .char", {
         // delay: 0.4,
         transformOrigin: "top bottom",
         duration: 1,
-        stagger: 0.8,
-        opacity: 0,
+        stagger: 0.4,
+        opacity: -1,
         // filter: "blur(40px)",
-        filter: "hue-rotate(80deg)"
+        filter: "hue-rotate(80deg)",
+        ease: "SlowMo.easeinOut",
 
+        delay: 0.1 // Add delay equal to the stagger time of the previous animation
     })
-    introSet.from("#intro .scroll-down-button", {
-        duration: 1,
+    gsap.from("#intro .scroll-down-button", {
+        duration: 2,
+        delay: 0.8,
         filter: "blur(40px)",
         scale: 0,
         opacity: 0
     })
 }
 introContainerAnimation();
+
 
 
 function landingFrameAnimation() {
