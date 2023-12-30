@@ -23,6 +23,10 @@
     font-family: Monument;
     src: url(./assets/fonts/MonumentExtended-Regular.otf);
 }
+@font-face {
+    font-family: Gamora;
+    src: url(./assets/fonts/gamora.ttf);
+}
 
 /* ---------------ANIMATION--------------- */
 
@@ -1184,12 +1188,14 @@ footer {
 
     .intro-line {
         /* font-size: 0.5rem; */
-        position: absolute;
+        position: relative;
         /* transform: translateY(160%); */
 
         margin: -3vw 10vw 0px;
 
         /* border: 2px solid red; */
+        /* display: inline-block; */
+        overflow: hidden;
     }
 
     .intro-text-1 {
@@ -1203,10 +1209,10 @@ footer {
         font-family: Krona One;
         font-size: 1.6rem;
         font-style: normal;
+        position: relative;
     }
-
     .intro-text-3 {
-        font-family: 'Sorts Mill Goudy', serif;
+        font-family: 'Gamora', serif;
         font-size: 1.8rem;
         font-style: normal;
     }
@@ -1268,8 +1274,8 @@ footer {
         transform: scale(1.4) translate(54vw, -15vh);
         /* mix-blend-mode: difference; */
     }
-    
-    .intro-img.coding{
+
+    .intro-img.coding {
         position: absolute;
         mix-blend-mode: lighten;
         left: 0vw;
@@ -2307,7 +2313,7 @@ footer {
     }
 
     .intro-text-3 {
-        font-family: 'Sorts Mill Goudy', serif;
+        font-family: 'Gamora', serif;
         font-size: 5.2vw;
         font-style: normal;
     }
@@ -2372,7 +2378,8 @@ footer {
         /* mix-blend-mode: color-dodge; */
         position: relative;
     }
-    .intro-img.coding{
+
+    .intro-img.coding {
         position: absolute;
         mix-blend-mode: lighten;
         left: 22vw;

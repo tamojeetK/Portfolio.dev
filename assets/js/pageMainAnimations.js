@@ -461,3 +461,44 @@ function animateConnectHandsMoBL() {
 }
 animateConnectHandsMoBL();
 
+// -------------------------------------------------------------------
+// Intro-Text animation =========================---------------
+const texts = ['Web Developer', 'JAVA Developer', 'UI / UX', 'Creative Designer', '3D Designing', 'Open Source'];
+let index = 0;
+
+const t13 = gsap.timeline({
+    defaults: { ease: "SlowMo.easeinOut" },
+    repeat: -1, // This will make the timeline repeat indefinitely
+    onRepeat: function () {
+        index = (index + 1) % texts.length; // This will cycle through the texts array
+    }
+});
+
+t13.to('.intro-text-3', {
+    duration: 1,
+    onComplete: function () {
+        document.querySelector('.intro-text-3').textContent = texts[index]; // This will change the text
+        if (texts[index] === '3D Designing' || texts[index] === 'Open Source' || texts[index] === 'UI / UX') {
+            document.querySelector('.intro-text-2').textContent = ' into ';
+        } else {
+            document.querySelector('.intro-text-2').textContent = ' a ';
+        }
+    }
+})
+    .fromTo('.intro-text-3, .intro-text-2, .intro-text-1' ,
+        {   // From
+            y: '100%',
+            opacity: 0,
+            filter: "blur(5px)",
+
+        },
+        {   // To
+            y: '0%',
+            duration: 3,
+            filter: "blur(0px)",
+            // delay: 0.3,
+            stagger: 0.6,
+            opacity: 1,
+            ease: "power1.inOut"
+        }
+    );
