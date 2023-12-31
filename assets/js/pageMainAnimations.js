@@ -489,13 +489,11 @@ t13.to('.intro-text-3', {
         {   // From
             y: '100%',
             opacity: 0,
-            filter: "blur(5px)",
 
         },
         {   // To
             y: '0%',
             duration: 3,
-            filter: "blur(0px)",
             // delay: 0.3,
             stagger: 0.6,
             opacity: 1,

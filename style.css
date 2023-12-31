@@ -838,8 +838,18 @@ footer {
 .home-shape14 {
     position: absolute;
 }
+.footer-span{
+    color:#0e7eff ;
+}
 
-
+footer a{
+    font-size: large;
+    text-decoration: none;
+    color:#00b7ff;
+}
+footer span{
+    color: #974dff;
+}
 
 
 /* styles for desktop screens */
