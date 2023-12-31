@@ -24,24 +24,23 @@ t2.to(".scroll-down-button path:nth-child(1)", {
   }, "-=1")
 
 
-// ------------===========SPLIT-TEXT-INTRO==========-----------
-// A function to split a text into multiple lines and wrap each line in a span element
-// function splitText(text) {
-//   // Split the text by line breaks
-//   let lines = text.split(/\n/);
-//   // Create an empty string to store the result
-//   let result = "";
-//   // Loop through each line
-//   for (let line of lines) {
-//     // Wrap the line in a span element with a class name 'line'
-//     result += `<span class='line'>${line}</span>\n`;
-//   }
-//   // Return the result
-//   return result;
-// }
-
-
 // ------------==============ABOUT-PARA==============------------
+
+// A function to split a text into multiple lines and wrap each line in a span element
+function splitText(text) {
+  // Split the text by line breaks
+  let lines = text.split(/\n/);
+  // Create an empty string to store the result
+  let result = "";
+  // Loop through each line
+  for (let line of lines) {
+    // Wrap the line in a span element with a class name 'line'
+    result += `<span class='line'>${line}</span>\n`;
+  }
+  // Return the result
+  return result;
+}
+
 function baffleAnimation() {
   // Get the element with the class name 'about-para'
   let element = document.querySelector(".about-para");
@@ -62,12 +61,10 @@ function baffleAnimation() {
       characters: "><>!@#$%^&*()vc</▓░  ▓░▒░ ",
       speed: 50
     });
-    b.start();
+    b.start();  
     b.reveal(800);
   }
 }
-
-// --------------------------------------------------------------------------------------------------------------------
 gsap.fromTo(".about-para", {
   // x: -400, // Set the initial x position to -400
   autoAlpha: 0 // Set the initial opacity to 0

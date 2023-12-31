@@ -485,7 +485,7 @@ t13.to('.intro-text-3', {
         }
     }
 })
-    .fromTo('.intro-text-3, .intro-text-2, .intro-text-1' ,
+    .fromTo('.intro-text-3, .intro-text-2' ,
         {   // From
             y: '100%',
             opacity: 0,
