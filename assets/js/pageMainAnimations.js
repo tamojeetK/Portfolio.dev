@@ -131,7 +131,7 @@ function introContainerAnimation() {
             opacity: 0,
             filter: "hue-rotate(80deg)",
             duration: 5,
-            delay: 2,
+            delay: 3,
 
         })
             .from("#intro .intro-img", {
@@ -139,7 +139,7 @@ function introContainerAnimation() {
                 repeat: -1,
                 duration: 2.5,
                 yoyo: true,
-                delay: 1,
+                delay: -4,
                 ease: "power1.inOut"
             });
         imgAnimate.from("#intro .intro-img.coding", {

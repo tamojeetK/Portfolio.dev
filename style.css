@@ -1940,7 +1940,14 @@ footer span{
 /* styles for mobile screens */
 /* @media only screen and (min-width: 361px) and (max-width: 767px) { */
 @media only screen and (max-width: 767px) {
-
+    #preloader .loading-gif{
+        z-index: 100;
+        width: 80vw;
+        mix-blend-mode: lighten;
+        top: -30vw;
+        position: relative;
+    
+    }
     .home::before {
         z-index: -5;
         content: '';
