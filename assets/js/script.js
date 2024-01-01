@@ -1,3 +1,4 @@
+// ------------------------------------------------Code for mobile view Nav menu--------------------------------------------------
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
@@ -22,8 +23,6 @@ window.addEventListener("scroll", function() {
   var header = document.querySelector("header");
   header.classList.toggle("scrolled", window.scrollY > 0);
 });
-
-
 
 
 

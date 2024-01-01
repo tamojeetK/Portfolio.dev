@@ -1,38 +1,3 @@
-paceOptions = {
-  ajax: true, //checks AJAX requests 
-  document: true, //document is ready
-}
-Pace.on('done', () => {
-  gsap.timeline()
-    .add('p')
-    .to('.pace', {
-      transform: 'scale(10,1)',
-      duration: 4
-    }, "+=.2")
-    .to('.pace', {
-      duration: 1,
-      height: "100%",
-      opacity: 0
-    }, "-=2.5")
-    .to('.loading-text', {
-      delay: .2,
-      duration: 3,
-      opacity: -1,
-      yPercent: -400,
-      ease: "BezierEasing(0.19, 1,0.22,1)"
-    }, 'p')
-    
-    .to('#main', {
-      duration: 2,
-      delay: .3,
-      y: -10,
-      opacity: 1,
-      ease: Expo.easeInOut,
-    }, "-=2.5")
-})
-
-
-
 // ------------===========SCROLL-DOWN-BUTTON===========-----------
 var t1 = gsap.timeline();
 t1.to(".scroll-down-button path", {

@@ -614,7 +614,8 @@ html {
     position: relative;
     overflow: hidden;
     opacity: 0;
-    background-color: #1A1A1A;
+    z-index: 2;
+    background-color: #1a1a1a;
 
 }
 

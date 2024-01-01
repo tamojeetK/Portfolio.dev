@@ -1,6 +1,46 @@
 Splitting();
 gsap.registerPlugin(ScrollTrigger);
 
+paceOptions = {
+    ajax: true, //checks AJAX requests 
+    document: true, //document is ready
+  }
+  Pace.on('done', () => {
+    gsap.timeline()
+        .add('p')
+        .to('.pace', {
+            transform: 'scale(10,1)',
+            duration: 4
+        }, "+=.2")
+        .to('.pace', {
+            duration: 1,
+            height: "100%",
+            opacity: 0
+        }, "-=2.5")
+        .to('.loading-text', {
+            delay: .2,
+            duration: 3,
+            opacity: -1,
+            yPercent: -400,
+            ease: "BezierEasing(0.19, 1,0.22,1)"
+        }, 'p')
+        .to('#main', {
+            // y: -1,
+            opacity: 1,
+            ease: Expo.easeInOut,
+        }, "-=2.5");
+  });
+  window.onload = function () {
+    Pace.on('done', function () {
+        // Your GSAP animations go here
+        headerAnimation()
+        logoAnimation();
+        introContainerAnimation();
+        landingFrameAnimation()
+    });
+  }
+  
+  
 
 // ------------------------------INTRO-PAGE Animations------------------------------
 
@@ -17,13 +57,14 @@ function headerAnimation() {
             duration: 0.8,
             stagger: 0.2,
             filter: "blur(0px)",
-            delay: 0.6,
+            delay: 2,
             opacity: 1,
             ease: "SlowMo.easeinOut"
         }
     );
 
 }
+// headerAnimation()
 // ---------------Logo Animation---------------
 function logoAnimation() {
     gsap.from("#header .nav-branding", {
@@ -31,15 +72,12 @@ function logoAnimation() {
         // scale: 0,
         filter: "blur(40px)",
         duration: 0.4,
-        delay: 0.8,
+        delay: 2.2,
         opacity: 1
     })
 }
-logoAnimation();
+// logoAnimation();
 
-if (window.matchMedia("(min-width: 1024px)").matches) {
-    headerAnimation();
-}
 // --------------------------------Intro-container Animation--------------------------------
 let introSet = gsap.timeline();
 function introContainerAnimation() {
@@ -48,21 +86,22 @@ function introContainerAnimation() {
         duration: 1,
         filter: "blur(40px)",
         stagger: 0.3, // Stagger time
+        delay: 2, // Add delay equal to the stagger time of the previous animation
         opacity: -5
     });
     introSet.from("#intro .intro-line", {
         duration: 1,
         opacity: -5,
-        delay: 0.3 // Add delay equal to the stagger time of the previous animation
+        delay: 1 // Add delay equal to the stagger time of the previous animation
     })
     introSet.from("#intro .landing-frame .text-2-card", {
         // scale: 0,
-        duration: 3,
+        duration: 1,
         stagger: 0.1, // Stagger time
         transformOrigin: "center center",
         opacity: 0,
         // filter: "blur(80px)",
-        delay: 0.3 // Add delay equal to the stagger time of the previous animation
+        delay: -2 // Add delay equal to the stagger time of the previous animation
     });
 
     let imgAnimate = gsap.timeline();
@@ -73,7 +112,7 @@ function introContainerAnimation() {
             opacity: 0,
             filter: "hue-rotate(80deg)",
             duration: 5,
-            delay: 0.8,
+            delay: 2,
         })
             .from("#intro .intro-img", {
                 y: -20,
@@ -85,14 +124,14 @@ function introContainerAnimation() {
         imgAnimate.from("#intro .intro-img.coding", {
             // filter: "hue-rotate(100deg)",
             duration: 5,
-            delay: 0.8,
+            delay: 2,
         });
     } else {
         imgAnimate.from("#intro .intro-img", {
             opacity: 0,
             filter: "hue-rotate(80deg)",
             duration: 5,
-            delay: 0.8,
+            delay: 2,
 
         })
             .from("#intro .intro-img", {
@@ -100,6 +139,7 @@ function introContainerAnimation() {
                 repeat: -1,
                 duration: 2.5,
                 yoyo: true,
+                delay: 1,
                 ease: "power1.inOut"
             });
         imgAnimate.from("#intro .intro-img.coding", {
@@ -122,17 +162,17 @@ function introContainerAnimation() {
         filter: "hue-rotate(80deg)",
         ease: "SlowMo.easeinOut",
 
-        delay: 0.1 // Add delay equal to the stagger time of the previous animation
+        delay:2 // Add delay equal to the stagger time of the previous animation
     })
     gsap.from("#intro .scroll-down-button", {
         duration: 2,
-        delay: 0.8,
+        delay: 2,
         filter: "blur(40px)",
         scale: 0,
         opacity: 0
     })
 }
-introContainerAnimation();
+// introContainerAnimation();
 
 
 
@@ -149,7 +189,7 @@ function landingFrameAnimation() {
 
 
 }
-landingFrameAnimation()
+// landingFrameAnimation()
 
 
 // ------------------------------Main Code for front-text animations------------------------------ 
@@ -485,7 +525,7 @@ t13.to('.intro-text-3', {
         }
     }
 })
-    .fromTo('.intro-text-3, .intro-text-2' ,
+    .fromTo('.intro-text-3, .intro-text-2',
         {   // From
             y: '100%',
             opacity: 0,
