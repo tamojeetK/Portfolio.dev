@@ -580,6 +580,7 @@ html {
     top: -5vw;
     pointer-events: none;
     user-select: none;
+    text-shadow: -3px 2px 28px rgba(255, 255, 255, 0.5);
 }
 .pace{
     pointer-events: none;
