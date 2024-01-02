@@ -119,6 +119,7 @@ function introContainerAnimation() {
                 repeat: -1,
                 duration: 2.5,
                 yoyo: true,
+                delay: -4,
                 ease: "power1.inOut"
             });
         imgAnimate.from("#intro .intro-img.coding", {
@@ -179,7 +180,7 @@ function introContainerAnimation() {
 function landingFrameAnimation() {
     gsap.from("#intro p span", {
         duration: 1,
-        delay: 0.2,
+        delay: 3,
         opacity: 0,
         filter: "blur(40px)",
 
