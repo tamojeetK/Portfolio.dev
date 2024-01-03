@@ -4,8 +4,8 @@ gsap.registerPlugin(ScrollTrigger);
 paceOptions = {
     ajax: true, //checks AJAX requests 
     document: true, //document is ready
-  }
-  Pace.on('done', () => {
+}
+Pace.on('done', () => {
     gsap.timeline()
         .add('p')
         .to('.pace', {
@@ -29,41 +29,44 @@ paceOptions = {
             opacity: 1,
             ease: Expo.easeInOut,
         }, "-=2.5");
-  });
-  window.onload = function () {
+});
+window.onload = function () {
     Pace.on('done', function () {
         // Your GSAP animations go here
         logoAnimation();
         introContainerAnimation();
         landingFrameAnimation()
     });
-  }
-  
-  
+}
+
+
 
 // ------------------------------INTRO-PAGE Animations------------------------------
 
 function headerAnimation() {
-    gsap.fromTo("#header .nav-item",
-        {
-            y: -100,
-            opacity: 0,
-            filter: "blur(50px)",
-
-        },
-        {
-            y: 0,
-            duration: 0.8,
-            stagger: 0.2,
-            filter: "blur(0px)",
-            delay: 2,
-            opacity: 1,
-            ease: "SlowMo.easeinOut"
-        }
-    );
-
+    // Check if the viewport is desktop
+    if (window.matchMedia("(min-width: 1024px)").matches) {
+        gsap.fromTo("#header .nav-item",
+            {
+                y: -100,
+                opacity: 0,
+                filter: "blur(50px)",
+            },
+            {
+                y: 0,
+                duration: 0.8,
+                stagger: 0.2,
+                filter: "blur(0px)",
+                delay: 2,
+                opacity: 1,
+                ease: "SlowMo.easeinOut"
+            }
+        );
+    }
 }
-headerAnimation()
+
+headerAnimation();
+
 // ---------------Logo Animation---------------
 function logoAnimation() {
     gsap.from("#header .nav-branding", {
@@ -162,7 +165,7 @@ function introContainerAnimation() {
         filter: "hue-rotate(80deg)",
         ease: "SlowMo.easeinOut",
 
-        delay:2 // Add delay equal to the stagger time of the previous animation
+        delay: 2 // Add delay equal to the stagger time of the previous animation
     })
     gsap.from("#intro .scroll-down-button", {
         duration: 2,
