@@ -23,6 +23,7 @@
     font-family: Monument;
     src: url(./assets/fonts/MonumentExtended-Regular.otf);
 }
+
 @font-face {
     font-family: Gamora;
     src: url(./assets/fonts/gamora.ttf);
@@ -551,8 +552,8 @@ body {
 html {
     background-color: transparent;
 }
- 
-#preloader{
+
+#preloader {
     width: 100%;
     height: 100vh;
     background-color: #000;
@@ -560,10 +561,11 @@ html {
     /* display: grid; */
     display: flex;
     flex-direction: column;
-    align-items:center; 
+    align-items: center;
     justify-content: center;
 }
-#preloader .loading-gif{
+
+#preloader .loading-gif {
     z-index: 100;
     width: 35vw;
     mix-blend-mode: lighten;
@@ -571,7 +573,8 @@ html {
     position: relative;
 
 }
-#preloader .loading-text{
+
+#preloader .loading-text {
     font-family: 'Monument', sans-serif;
     letter-spacing: 0.5vw;
     color: #fff;
@@ -582,7 +585,8 @@ html {
     user-select: none;
     text-shadow: -3px 2px 28px rgba(255, 255, 255, 0.5);
 }
-.pace{
+
+.pace {
     pointer-events: none;
     user-select: none;
     z-index: 2000;
@@ -599,7 +603,8 @@ html {
     background-color: #1b1b1b;
 
 }
-.pace .pace-progress{
+
+.pace .pace-progress {
     max-width: 40vw;
     position: absolute;
     z-index: 2000;
@@ -667,6 +672,7 @@ header {
 
 header ul {
     list-style: none;
+    
 }
 
 header a {
@@ -897,16 +903,18 @@ footer {
 .home-shape14 {
     position: absolute;
 }
-.footer-span{
-    color:#0e7eff ;
+
+.footer-span {
+    color: #0e7eff;
 }
 
-footer a{
+footer a {
     font-size: large;
     text-decoration: none;
-    color:#00b7ff;
+    color: #00b7ff;
 }
-footer span{
+
+footer span {
     color: #974dff;
 }
 
@@ -1108,7 +1116,6 @@ footer span{
         width: auto;
         position: fixed;
         width: 100%;
-        transition: .2s ease-in-out;
         border-radius: 50px 50px 50px 50px;
         transform: translateY(10px);
     }
@@ -1280,6 +1287,7 @@ footer span{
         font-style: normal;
         position: relative;
     }
+
     .intro-text-3 {
         font-family: 'Gamora', serif;
         font-size: 1.8rem;
@@ -1476,32 +1484,42 @@ footer span{
         position: absolute;
         cursor: pointer;
         border-radius: 20px;
+        border: 2px solid rgba(255, 255, 255, 0.14);
         background: #1D93FF;
-        border: #1D93FF solid 1px;
+        box-shadow: 0px 20px 50px -20px #1D93FF;
         padding: 1vw 3vw;
         white-space: nowrap;
-        color: #000;
-        font-family: Michroma;
-        font-size: 0.8em;
-        font-style: normal;
-        font-weight: 800;
-        transition: 0.3s ease-out;
         width: fit-content;
         width: -moz-fit-content;
         transform: translateX(7.5vw);
-        top: calc(100% + -11%);
+        top: calc(100% + -6vw);
+        /* top: 45vw; */
 
     }
 
     .about-button a {
         text-decoration: none;
         color: #000;
+        letter-spacing: 1px;
+        -webkit-text-stroke-width: 0.5px;
+        -webkit-text-stroke-color: black;
+        font-family: Michroma;
+        font-size: 1.2em;
+        font-weight: 800;
     }
-
+    .onHover a {
+        color: #FFF;
+        -webkit-text-stroke-width: 0.5px;
+        -webkit-text-stroke-color: rgb(255, 255, 255);
+    }
+    
     .onHover {
+        color: #FFF;
+        text-shadow: 0px 0px 8px #FFF;
+        border-radius: 20px;
         border: 2px solid #2397DE;
         background: linear-gradient(90deg, #00C7FF 0%, #0084DC 96.21%);
-        box-shadow: -13px -6px 35px 4px rgba(0, 200, 255, 0.29), 11px 11px 38px 1px rgba(0, 22, 47, 0.77);
+        box-shadow: -13px -6px 35px 4px rgba(0, 200, 255, 0.29), 11px 11px 38px 1px rgba(0, 22, 47, 0.77), 0px 15px 30px 4px rgba(6, 135, 228, 0.50);
     }
 
     /* ----------------=====================================---------------- */
@@ -1595,33 +1613,46 @@ footer span{
     }
 
     .project-link .arrow img {
-        width: 3vw;
+        width: 2.5vw;
     }
 
     .projects-button {
+        position: absolute;
         cursor: pointer;
         border-radius: 20px;
+        border: 2px solid rgba(255, 255, 255, 0.14);
         background: #1D93FF;
-        border: #1D93FF solid 1px;
-        padding: 1vw 5vw;
+        box-shadow: 0px 20px 50px -20px #1D93FF;
+        padding: 1vw 3vw;
         white-space: nowrap;
-        color: #000;
-        font-family: Michroma;
-        font-size: 1em;
-        font-style: normal;
-        font-weight: 800;
-        transition: 0.3s ease-out;
         width: fit-content;
         width: -moz-fit-content;
-        margin-top: 2vw;
-        margin-bottom: 4vw;
+        top: calc(100% + -6vw);
     }
 
     .projects-button a {
         text-decoration: none;
         color: #000;
+        letter-spacing: 1px;
+        -webkit-text-stroke-width: 0.5px;
+        -webkit-text-stroke-color: black;
+        font-family: Michroma;
+        font-size: 1.2em;
+        font-weight: 800;
     }
-
+    .onHover a {
+        color: #FFF;
+        -webkit-text-stroke-width: 0.5px;
+        -webkit-text-stroke-color: rgb(255, 255, 255);
+    }
+    .onHover {
+        color: #FFF;
+        text-shadow: 0px 0px 8px #FFF;
+        border-radius: 20px;
+        border: 2px solid #2397DE;
+        background: linear-gradient(90deg, #00C7FF 0%, #0084DC 96.21%);
+        box-shadow: -13px -3px 35px 4px rgba(0, 200, 255, 0.29), 11px 20px 35px 2px rgba(0, 22, 47, 0.77), 0px 15px 40px 5px rgba(6, 135, 228, 0.50);
+    }
     /* ----------------================================---------------- */
 
 
@@ -1856,43 +1887,54 @@ footer span{
     }
 
     .connect-button {
+        /* position: absolute; */
         cursor: pointer;
         border-radius: 20px;
+        border: 2px solid rgba(255, 255, 255, 0.14);
         background: #1D93FF;
-        border: #1D93FF solid 1px;
-        padding: 1vw 6vw;
+        box-shadow: 0px 20px 50px -20px #1D93FF;
+        padding: 1vw 3vw;
         white-space: nowrap;
-        color: #000;
-        font-family: Michroma;
-        font-size: 1.2em;
-        font-style: normal;
-        font-weight: 800;
-        transition: 0.3s ease-out;
         width: fit-content;
         width: -moz-fit-content;
+        top: calc(100% + -6vw);
     }
 
     .connect-button a {
         text-decoration: none;
         color: #000;
+        letter-spacing: 1px;
+        -webkit-text-stroke-width: 0.5px;
+        -webkit-text-stroke-color: black;
+        font-family: Michroma;
+        font-size: 1.2em;
+        font-weight: 800;
     }
-
+    .onHover a {
+        color: #FFF;
+        -webkit-text-stroke-width: 0.5px;
+        -webkit-text-stroke-color: rgb(255, 255, 255);
+    }
+    
     .onHover {
+        color: #FFF;
+        text-shadow: 0px 0px 8px #FFF;
+        border-radius: 20px;
         border: 2px solid #2397DE;
         background: linear-gradient(90deg, #00C7FF 0%, #0084DC 96.21%);
-        box-shadow: -13px -6px 35px 4px rgba(0, 200, 255, 0.29), 11px 11px 38px 1px rgba(0, 22, 47, 0.77);
+        box-shadow: -13px -6px 35px 4px rgba(0, 200, 255, 0.29), 11px 11px 38px 1px rgba(0, 22, 47, 0.77), 0px 15px 30px 4px rgba(6, 135, 228, 0.50);
     }
 
     .connect-para {
         /* border: solid red; */
-        position: absolute;
         text-align: center;
         color: #FFF;
         font-family: 'Barlow Condensed', sans-serif;
         font-size: calc(6px + 1.5vw);
         font-style: normal;
         font-weight: 100;
-        transform: translate(26vw, 24vw);
+        transform: translateY(-4vw);
+        /* transform: translate(26vw, 24vw); */
         /* line-height: calc(12px + 1vw); */
         white-space: pre-wrap;
         /* border: #EB00FF solid 2px; */
@@ -1941,14 +1983,15 @@ footer span{
 /* styles for mobile screens */
 /* @media only screen and (min-width: 361px) and (max-width: 767px) { */
 @media only screen and (max-width: 767px) {
-    #preloader .loading-gif{
+    #preloader .loading-gif {
         z-index: 100;
         width: 80vw;
         mix-blend-mode: lighten;
         top: -30vw;
         position: relative;
-    
+
     }
+
     .home::before {
         z-index: -5;
         content: '';
@@ -2296,12 +2339,12 @@ footer span{
     }
 
     .hamburger.active .bar:nth-child(1) {
-        border-radius: 50%;
+        /* border-radius: 50%; */
         transform: translateY(7.6px) rotate(25deg);
     }
 
     .hamburger.active .bar:nth-child(3) {
-        border-radius: 50%;
+        /* border-radius: 50%; */
         transform: translateY(-7.2px) rotate(-25deg);
     }
 
@@ -2589,32 +2632,39 @@ footer span{
 
 
     .about-button {
+        position: absolute;
         cursor: pointer;
         border-radius: 10px;
+        border: 2px solid rgba(255, 255, 255, 0.14);
         background: #1D93FF;
-        border: #1D93FF solid 1px;
-        padding: 3vw 8vw;
+        box-shadow: 0px 20px 50px -20px #1D93FF;
+        padding: 2vw 3vw;
         white-space: nowrap;
-        color: #000;
-        font-family: Michroma;
-        font-size: 0.7em;
-        font-style: normal;
-        font-weight: 800;
-        transition: 0.3s ease-out;
-        transform: translateY(-20vw);
+        /* top: 10vw; */
+        transform: translateY(180vw);
     }
 
     .about-button a {
         text-decoration: none;
         color: #000;
+        font-family: Michroma;
+        font-size: 0.7em;
+        font-style: normal;
+        font-weight: 800;
     }
-
-
+    .onHover a {
+        color: #FFF;
+        -webkit-text-stroke-width: 0.5px;
+        -webkit-text-stroke-color: rgb(255, 255, 255);
+    }
+    
     .onHover {
+        color: #FFF;
+        text-shadow: 0px 0px 8px #FFF;
         border-radius: 10px;
         border: 2px solid #2397DE;
         background: linear-gradient(90deg, #00C7FF 0%, #0084DC 96.21%);
-        box-shadow: -13px -6px 35px 4px rgba(0, 200, 255, 0.29), 11px 11px 38px 1px rgba(0, 22, 47, 0.77);
+        box-shadow: -13px -6px 35px 4px rgba(0, 200, 255, 0.29), 11px 11px 38px 1px rgba(0, 22, 47, 0.77), 0px 15px 30px 4px rgba(6, 135, 228, 0.50);
     }
 
     /* ----------------=====================================---------------- */
@@ -2718,26 +2768,36 @@ footer span{
     .projects-button {
         cursor: pointer;
         border-radius: 10px;
+        border: 2px solid rgba(255, 255, 255, 0.14);
         background: #1D93FF;
-        border: #1D93FF solid 1px;
-        padding: 3vw 8vw;
-
+        box-shadow: 0px 20px 50px -20px #1D93FF;
+        padding: 2vw 6vw;
         white-space: nowrap;
+        /* transform: translateY(30vw); */
+    margin-bottom: 15vw;    }
+
+    .projects-button a {
+        text-decoration: none;
         color: #000;
         font-family: Michroma;
         font-size: 0.7em;
         font-style: normal;
         font-weight: 800;
-        transition: 0.3s ease-out;
-        margin-bottom: 5vw;
-
     }
-
-    .projects-button a {
-        text-decoration: none;
-        color: #000;
+    .onHover a {
+        color: #FFF;
+        -webkit-text-stroke-width: 0.5px;
+        -webkit-text-stroke-color: rgb(255, 255, 255);
     }
-
+    
+    .onHover {
+        color: #FFF;
+        text-shadow: 0px 0px 8px #FFF;
+        border-radius: 10px;
+        border: 2px solid #2397DE;
+        background: linear-gradient(90deg, #00C7FF 0%, #0084DC 96.21%);
+        box-shadow: -13px -6px 35px 4px rgba(0, 200, 255, 0.29), 11px 11px 38px 1px rgba(0, 22, 47, 0.77), 0px 15px 30px 4px rgba(6, 135, 228, 0.50);
+    }
     .hover-image {
         position: absolute;
         margin-top: 385vw;
@@ -3013,26 +3073,36 @@ footer span{
 
     .connect-button {
         cursor: pointer;
-        border-radius: 2vw;
+        border-radius: 10px;
+        border: 2px solid rgba(255, 255, 255, 0.14);
         background: #1D93FF;
-        border: #1D93FF solid 0.1vw;
-        padding: 2vw 5vw;
+        box-shadow: 0px 20px 50px -20px #1D93FF;
+        padding: 2vw 6vw;
         white-space: nowrap;
-        color: #000;
-        font-family: Michroma;
-        font-size: 0.8em;
-        font-style: normal;
-        font-weight: 800;
-        transition: 0.3s ease-out;
-        width: fit-content;
-        width: -moz-fit-content;
     }
 
     .connect-button a {
         text-decoration: none;
         color: #000;
+        font-family: Michroma;
+        font-size: 0.7em;
+        font-style: normal;
+        font-weight: 800;
     }
-
+    .onHover a {
+        color: #FFF;
+        -webkit-text-stroke-width: 0.5px;
+        -webkit-text-stroke-color: rgb(255, 255, 255);
+    }
+    
+    .onHover {
+        color: #FFF;
+        text-shadow: 0px 0px 8px #FFF;
+        border-radius: 10px;
+        border: 2px solid #2397DE;
+        background: linear-gradient(90deg, #00C7FF 0%, #0084DC 96.21%);
+        box-shadow: -13px -6px 35px 4px rgba(0, 200, 255, 0.29), 11px 11px 38px 1px rgba(0, 22, 47, 0.77), 0px 15px 30px 4px rgba(6, 135, 228, 0.50);
+    }
     .connect-para {
         /* border: solid red; */
         position: absolute;
@@ -3040,11 +3110,11 @@ footer span{
         /* justify-content: center; */
         color: #FFF;
         font-family: 'Barlow Condensed', sans-serif;
-        font-size: calc(10px + 1.2vw);
+        font-size: calc(10px + 1.1vw);
         font-style: normal;
         font-weight: 100;
-        bottom: 40vw;
-        left: 4vw;
+        bottom: 20vw;
+        left: -2vw;
 
         /* line-height: calc(12px + 1vw); */
         white-space: pre-wrap;

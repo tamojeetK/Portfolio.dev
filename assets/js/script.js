@@ -19,7 +19,7 @@ document.querySelectorAll(".nav-link").forEach((n) =>
 );
 
 // -----------------------------------Code for Desktop Navbar Blur filter-----------------------------------
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function () {
   var header = document.querySelector("header");
   header.classList.toggle("scrolled", window.scrollY > 0);
 });
@@ -46,15 +46,27 @@ document.querySelectorAll(".nav-link").forEach(n => {
 // Get the button element by its id
 var buttons = document.querySelectorAll(".about-button, .projects-button, .connect-button");
 
-// Define a function that can add or remove the .onHover class
 function toggleHoverClass(event) {
   // Check if the event type is mouseover or mouseout
   if (event.type == "mouseover") {
     // Add the .onHover class to the button element
     this.classList.add("onHover");
+    this.querySelector('.about-button a').textContent = "Know More"; // Change the text to "Check out"
+    // Add GSAP animation with ease
+    gsap.to(this, {
+      duration: 0.5,
+      scale: 1.05,
+      ease: "power1.out"
+    });
   } else if (event.type == "mouseout") {
     // Remove the .onHover class from the button element
     this.classList.remove("onHover");
+    this.querySelector('.about-button a').textContent = "More Curious?"; // Change the text back to the original text
+    // Revert GSAP animation
+    gsap.to(this, {
+      duration: 0.5,
+      ease: "power1.out" 
+    });
   }
 }
 
@@ -65,12 +77,9 @@ buttons.forEach(function (button) {
 });
 
 
-
+// -----------===========GLITCH EFFECT==============----------------
 const text2 = document.querySelector(".text-2");
 
-
-
-// -----------===========GLITCH EFFECT==============----------------
 let animationDone = false;
 
 // Start the animation
@@ -79,11 +88,11 @@ text2.classList.add("paths");
 text2.classList.add("layers");
 
 // Use setTimeout to remove the classes after 4 seconds
-setTimeout(function() {
-    text2.classList.remove("glitch");
-    text2.classList.remove("paths");
-    text2.classList.remove("layers");
-    animationDone = true; // Set the flag to true after the initial animation is done
+setTimeout(function () {
+  text2.classList.remove("glitch");
+  text2.classList.remove("paths");
+  text2.classList.remove("layers");
+  animationDone = true; // Set the flag to true after the initial animation is done
 }, 4000); // 6000 milliseconds = 4 seconds
 
 function toggleGlitchEffect(event) {
@@ -102,7 +111,7 @@ text2.addEventListener("mouseout", toggleGlitchEffect);
 
 
 
-// ----------------================PROJECT-HOVER-EFFECT================----------------
+// ----------------================PROJECT-HOVER-IMG-EFFECT================----------------
 const projects = document.querySelectorAll(".project-title, .project-link");
 const hoverImage = document.querySelector(".hover-image");
 

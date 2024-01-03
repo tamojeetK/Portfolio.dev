@@ -33,7 +33,6 @@ paceOptions = {
   window.onload = function () {
     Pace.on('done', function () {
         // Your GSAP animations go here
-        headerAnimation()
         logoAnimation();
         introContainerAnimation();
         landingFrameAnimation()
@@ -64,7 +63,7 @@ function headerAnimation() {
     );
 
 }
-// headerAnimation()
+headerAnimation()
 // ---------------Logo Animation---------------
 function logoAnimation() {
     gsap.from("#header .nav-branding", {
