@@ -672,7 +672,7 @@ header {
 
 header ul {
     list-style: none;
-    
+
 }
 
 header a {
@@ -1507,12 +1507,13 @@ footer span {
         font-size: 1.2em;
         font-weight: 800;
     }
+
     .onHover a {
         color: #FFF;
         -webkit-text-stroke-width: 0.5px;
         -webkit-text-stroke-color: rgb(255, 255, 255);
     }
-    
+
     .onHover {
         color: #FFF;
         text-shadow: 0px 0px 8px #FFF;
@@ -1640,11 +1641,13 @@ footer span {
         font-size: 1.2em;
         font-weight: 800;
     }
+
     .onHover a {
         color: #FFF;
         -webkit-text-stroke-width: 0.5px;
         -webkit-text-stroke-color: rgb(255, 255, 255);
     }
+
     .onHover {
         color: #FFF;
         text-shadow: 0px 0px 8px #FFF;
@@ -1653,6 +1656,7 @@ footer span {
         background: linear-gradient(90deg, #00C7FF 0%, #0084DC 96.21%);
         box-shadow: -13px -3px 35px 4px rgba(0, 200, 255, 0.29), 11px 20px 35px 2px rgba(0, 22, 47, 0.77), 0px 15px 40px 5px rgba(6, 135, 228, 0.50);
     }
+
     /* ----------------================================---------------- */
 
 
@@ -1910,12 +1914,13 @@ footer span {
         font-size: 1.2em;
         font-weight: 800;
     }
+
     .onHover a {
         color: #FFF;
         -webkit-text-stroke-width: 0.5px;
         -webkit-text-stroke-color: rgb(255, 255, 255);
     }
-    
+
     .onHover {
         color: #FFF;
         text-shadow: 0px 0px 8px #FFF;
@@ -2652,12 +2657,13 @@ footer span {
         font-style: normal;
         font-weight: 800;
     }
+
     .onHover a {
         color: #FFF;
         -webkit-text-stroke-width: 0.5px;
         -webkit-text-stroke-color: rgb(255, 255, 255);
     }
-    
+
     .onHover {
         color: #FFF;
         text-shadow: 0px 0px 8px #FFF;
@@ -2774,7 +2780,8 @@ footer span {
         padding: 2vw 6vw;
         white-space: nowrap;
         /* transform: translateY(30vw); */
-    margin-bottom: 15vw;    }
+        margin-bottom: 15vw;
+    }
 
     .projects-button a {
         text-decoration: none;
@@ -2784,12 +2791,13 @@ footer span {
         font-style: normal;
         font-weight: 800;
     }
+
     .onHover a {
         color: #FFF;
         -webkit-text-stroke-width: 0.5px;
         -webkit-text-stroke-color: rgb(255, 255, 255);
     }
-    
+
     .onHover {
         color: #FFF;
         text-shadow: 0px 0px 8px #FFF;
@@ -2798,6 +2806,7 @@ footer span {
         background: linear-gradient(90deg, #00C7FF 0%, #0084DC 96.21%);
         box-shadow: -13px -6px 35px 4px rgba(0, 200, 255, 0.29), 11px 11px 38px 1px rgba(0, 22, 47, 0.77), 0px 15px 30px 4px rgba(6, 135, 228, 0.50);
     }
+
     .hover-image {
         position: absolute;
         margin-top: 385vw;
@@ -3089,12 +3098,13 @@ footer span {
         font-style: normal;
         font-weight: 800;
     }
+
     .onHover a {
         color: #FFF;
         -webkit-text-stroke-width: 0.5px;
         -webkit-text-stroke-color: rgb(255, 255, 255);
     }
-    
+
     .onHover {
         color: #FFF;
         text-shadow: 0px 0px 8px #FFF;
@@ -3103,6 +3113,7 @@ footer span {
         background: linear-gradient(90deg, #00C7FF 0%, #0084DC 96.21%);
         box-shadow: -13px -6px 35px 4px rgba(0, 200, 255, 0.29), 11px 11px 38px 1px rgba(0, 22, 47, 0.77), 0px 15px 30px 4px rgba(6, 135, 228, 0.50);
     }
+
     .connect-para {
         /* border: solid red; */
         position: absolute;
