@@ -1871,7 +1871,7 @@ footer span {
 
     .connect .connect-hand1 {
         width: 25vw;
-        transform: scale(1.6) translate(11%, 25%);
+        transform: scale(1.6) translate(20%, 25%);
         top: 12vw;
         mix-blend-mode: difference;
     }
